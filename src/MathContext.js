@@ -81,7 +81,7 @@
 
 //--public final class MathContext implements java.io.Serializable{
  //--private static final java.lang.String $0="MathContext.nrx";
- 
+
  //-- methods
  MathContext.prototype.getDigits = getDigits;
  MathContext.prototype.getForm = getForm;
@@ -90,7 +90,7 @@
  MathContext.prototype.toString = toString;
  MathContext.prototype.isValidRound = isValidRound;
 
- 
+
  /* ----- Properties ----- */
  /* properties public constant */
  /**
@@ -106,7 +106,7 @@
   */
  //--public static final int PLAIN=0; // [no exponent]
  MathContext.prototype.PLAIN=0; // [no exponent]
- 
+
  /**
   * Standard floating point notation (with scientific exponential
   * format, where there is one digit before any decimal point).
@@ -121,7 +121,7 @@
   */
  //--public static final int SCIENTIFIC=1; // 1 digit before .
  MathContext.prototype.SCIENTIFIC=1; // 1 digit before .
- 
+
  /**
   * Standard floating point notation (with engineering exponential
   * format, where the power of ten is a multiple of 3).
@@ -136,7 +136,7 @@
   */
  //--public static final int ENGINEERING=2; // 1-3 digits before .
  MathContext.prototype.ENGINEERING=2; // 1-3 digits before .
- 
+
  // The rounding modes match the original BigDecimal class values
  /**
   * Rounding mode to round to a more positive number.
@@ -149,7 +149,7 @@
   */
  //--public static final int ROUND_CEILING=2;
  MathContext.prototype.ROUND_CEILING=2;
- 
+
  /**
   * Rounding mode to round towards zero.
   * Used as a setting to control the rounding mode used during a
@@ -161,7 +161,7 @@
   */
  //--public static final int ROUND_DOWN=1;
  MathContext.prototype.ROUND_DOWN=1;
- 
+
  /**
   * Rounding mode to round to a more negative number.
   * Used as a setting to control the rounding mode used during a
@@ -173,7 +173,7 @@
   */
  //--public static final int ROUND_FLOOR=3;
  MathContext.prototype.ROUND_FLOOR=3;
- 
+
  /**
   * Rounding mode to round to nearest neighbor, where an equidistant
   * value is rounded down.
@@ -188,7 +188,7 @@
   */
  //--public static final int ROUND_HALF_DOWN=5;
  MathContext.prototype.ROUND_HALF_DOWN=5;
- 
+
  /**
   * Rounding mode to round to nearest neighbor, where an equidistant
   * value is rounded to the nearest even neighbor.
@@ -207,7 +207,7 @@
   */
  //--public static final int ROUND_HALF_EVEN=6;
  MathContext.prototype.ROUND_HALF_EVEN=6;
- 
+
  /**
   * Rounding mode to round to nearest neighbor, where an equidistant
   * value is rounded up.
@@ -222,7 +222,7 @@
   */
  //--public static final int ROUND_HALF_UP=4;
  MathContext.prototype.ROUND_HALF_UP=4;
- 
+
  /**
   * Rounding mode to assert that no rounding is necessary.
   * Used as a setting to control the rounding mode used during a
@@ -235,7 +235,7 @@
   */
  //--public static final int ROUND_UNNECESSARY=7;
  MathContext.prototype.ROUND_UNNECESSARY=7;
- 
+
  /**
   * Rounding mode to round away from zero.
   * Used as a setting to control the rounding mode used during a
@@ -247,8 +247,8 @@
   */
  //--public static final int ROUND_UP=0;
  MathContext.prototype.ROUND_UP=0;
- 
- 
+
+
  /* properties shared */
  /**
   * The number of digits (precision) to be used for an operation.
@@ -265,7 +265,7 @@
   * @serial
   */
  //--int digits;
- 
+
  /**
   * The form of results from an operation.
   * <p>
@@ -279,7 +279,7 @@
   * @serial
   */
  //--int form; // values for this must fit in a byte
- 
+
  /**
   * Controls whether lost digits checking is enabled for an
   * operation.
@@ -295,7 +295,7 @@
   * @serial
   */
  //--boolean lostDigits;
- 
+
  /**
   * The rounding algorithm to be used for an operation.
   * <p>
@@ -316,7 +316,7 @@
   * @serial
   */
  //--int roundingMode;
- 
+
  /* properties private constant */
  // default settings
  //--private static final int DEFAULT_FORM=SCIENTIFIC;
@@ -327,9 +327,9 @@
  MathContext.prototype.DEFAULT_DIGITS=9;
  MathContext.prototype.DEFAULT_LOSTDIGITS=false;
  MathContext.prototype.DEFAULT_ROUNDINGMODE=MathContext.prototype.ROUND_HALF_UP;
- 
+
  /* properties private constant */
- 
+
  //--private static final int MIN_DIGITS=0; // smallest value for DIGITS.
  //--private static final int MAX_DIGITS=999999999; // largest value for DIGITS.  If increased,
  MathContext.prototype.MIN_DIGITS=0; // smallest value for DIGITS.
@@ -338,19 +338,19 @@
  // list of valid rounding mode values, most common two first
  //--private static final int ROUNDS[]=new int[]{ROUND_HALF_UP,ROUND_UNNECESSARY,ROUND_CEILING,ROUND_DOWN,ROUND_FLOOR,ROUND_HALF_DOWN,ROUND_HALF_EVEN,ROUND_UP};
  MathContext.prototype.ROUNDS=new Array(MathContext.prototype.ROUND_HALF_UP,MathContext.prototype.ROUND_UNNECESSARY,MathContext.prototype.ROUND_CEILING,MathContext.prototype.ROUND_DOWN,MathContext.prototype.ROUND_FLOOR,MathContext.prototype.ROUND_HALF_DOWN,MathContext.prototype.ROUND_HALF_EVEN,MathContext.prototype.ROUND_UP);
- 
- 
+
+
  //--private static final java.lang.String ROUNDWORDS[]=new java.lang.String[]{"ROUND_HALF_UP","ROUND_UNNECESSARY","ROUND_CEILING","ROUND_DOWN","ROUND_FLOOR","ROUND_HALF_DOWN","ROUND_HALF_EVEN","ROUND_UP"}; // matching names of the ROUNDS values
  MathContext.prototype.ROUNDWORDS=new Array("ROUND_HALF_UP","ROUND_UNNECESSARY","ROUND_CEILING","ROUND_DOWN","ROUND_FLOOR","ROUND_HALF_DOWN","ROUND_HALF_EVEN","ROUND_UP"); // matching names of the ROUNDS values
- 
- 
- 
- 
+
+
+
+
  /* properties private constant unused */
- 
+
  // Serialization version
  //--private static final long serialVersionUID=7163376998892515376L;
- 
+
  /* properties public constant */
  /**
   * A <code>MathContext</code> object initialized to the default
@@ -365,11 +365,11 @@
  //--public static final com.ibm.icu.math.MathContext DEFAULT=new com.ibm.icu.math.MathContext(DEFAULT_DIGITS,DEFAULT_FORM,DEFAULT_LOSTDIGITS,DEFAULT_ROUNDINGMODE);
  MathContext.prototype.DEFAULT=new MathContext(MathContext.prototype.DEFAULT_DIGITS,MathContext.prototype.DEFAULT_FORM,MathContext.prototype.DEFAULT_LOSTDIGITS,MathContext.prototype.DEFAULT_ROUNDINGMODE);
 
- 
- 
- 
+
+
+
  /* ----- Constructors ----- */
- 
+
  /**
   * Constructs a new <code>MathContext</code> with a specified
   * precision.
@@ -385,12 +385,12 @@
   * @throws IllegalArgumentException parameter out of range.
   * @stable ICU 2.0
   */
- 
+
  //--public MathContext(int setdigits){
  //-- this(setdigits,DEFAULT_FORM,DEFAULT_LOSTDIGITS,DEFAULT_ROUNDINGMODE);
  //-- return;}
 
- 
+
  /**
   * Constructs a new <code>MathContext</code> with a specified
   * precision and form.
@@ -410,7 +410,7 @@
   * @throws IllegalArgumentException parameter out of range.
   * @stable ICU 2.0
   */
- 
+
  //--public MathContext(int setdigits,int setform){
  //-- this(setdigits,setform,DEFAULT_LOSTDIGITS,DEFAULT_ROUNDINGMODE);
  //-- return;}
@@ -436,7 +436,7 @@
   * @throws IllegalArgumentException parameter out of range.
   * @stable ICU 2.0
   */
- 
+
  //--public MathContext(int setdigits,int setform,boolean setlostdigits){
  //-- this(setdigits,setform,setlostdigits,DEFAULT_ROUNDINGMODE);
  //-- return;}
@@ -462,7 +462,7 @@
   * @throws IllegalArgumentException parameter out of range.
   * @stable ICU 2.0
   */
- 
+
  //--public MathContext(int setdigits,int setform,boolean setlostdigits,int setroundingmode){super();
  function MathContext() {
   //-- members
@@ -495,14 +495,14 @@
     throw "MathContext(): " + MathContext.arguments.length + " arguments given; expected 1 to 4"
    }
   var setdigits = MathContext.arguments[0];
-  
-  
+
+
   // set values, after checking
-  if (setdigits!=this.DEFAULT_DIGITS) 
+  if (setdigits!=this.DEFAULT_DIGITS)
    {
-    if (setdigits<this.MIN_DIGITS) 
+    if (setdigits<this.MIN_DIGITS)
      throw "MathContext(): Digits too small: "+setdigits;
-    if (setdigits>this.MAX_DIGITS) 
+    if (setdigits>this.MAX_DIGITS)
      throw "MathContext(): Digits too large: "+setdigits;
    }
   {/*select*/
@@ -516,7 +516,7 @@
    throw "MathContext() Bad form value: "+setform;
   }
   }
-  if ((!(this.isValidRound(setroundingmode)))) 
+  if ((!(this.isValidRound(setroundingmode))))
    throw "MathContext(): Bad roundingMode value: "+setroundingmode;
   this.digits=setdigits;
   this.form=setform;
@@ -532,7 +532,7 @@
   *         setting
   * @stable ICU 2.0
   */
- 
+
  //--public int getDigits(){
  function getDigits() {
   return this.digits;
@@ -548,7 +548,7 @@
   * @return an <code>int</code> which is the value of the form setting
   * @stable ICU 2.0
   */
- 
+
  //--public int getForm(){
  function getForm() {
   return this.form;
@@ -563,7 +563,7 @@
   *           setting
   * @stable ICU 2.0
   */
- 
+
  //--public boolean getLostDigits(){
  function getLostDigits() {
   return this.lostDigits;
@@ -585,7 +585,7 @@
   *         setting
   * @stable ICU 2.0
   */
- 
+
  //--public int getRoundingMode(){
  function getRoundingMode() {
   return this.roundingMode;
@@ -628,7 +628,7 @@
   * @return a <code>String</code> representing the context settings.
   * @stable ICU 2.0
   */
- 
+
  //--public java.lang.String toString(){
  function toString() {
   //--java.lang.String formstr=null;
@@ -647,7 +647,7 @@
   }
   }
   {var $1=this.ROUNDS.length;r=0;r:for(;$1>0;$1--,r++){
-   if (this.roundingMode==this.ROUNDS[r]) 
+   if (this.roundingMode==this.ROUNDS[r])
     {
      roundword=this.ROUNDWORDS[r];
      break r;
@@ -657,16 +657,16 @@
   return "digits="+this.digits+" "+"form="+formstr+" "+"lostDigits="+(this.lostDigits?"1":"0")+" "+"roundingMode="+roundword;
   }
 
- 
+
  /* <sgml> Test whether round is valid. </sgml> */
  // This could be made shared for use by BigDecimal for setScale.
- 
+
  //--private static boolean isValidRound(int testround){
  function isValidRound(testround) {
   //--int r=0;
   var r=0;
   {var $2=this.ROUNDS.length;r=0;r:for(;$2>0;$2--,r++){
-   if (testround==this.ROUNDS[r]) 
+   if (testround==this.ROUNDS[r])
     return true;
    }
   }/*r*/

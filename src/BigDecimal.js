@@ -344,7 +344,7 @@ BigDecimal.prototype.createArrayWithZeros = createArrayWithZeros;
   */
  //--public static final int ROUND_CEILING=com.ibm.icu.math.MathContext.ROUND_CEILING;
  BigDecimal.prototype.ROUND_CEILING = MathContext.prototype.ROUND_CEILING;
- 
+
  /**
   * Rounding mode to round towards zero.
   * @see MathContext#ROUND_DOWN
@@ -352,7 +352,7 @@ BigDecimal.prototype.createArrayWithZeros = createArrayWithZeros;
   */
  //--public static final int ROUND_DOWN=com.ibm.icu.math.MathContext.ROUND_DOWN;
  BigDecimal.prototype.ROUND_DOWN = MathContext.prototype.ROUND_DOWN;
- 
+
  /**
   * Rounding mode to round to a more negative number.
   * @see MathContext#ROUND_FLOOR
@@ -360,7 +360,7 @@ BigDecimal.prototype.createArrayWithZeros = createArrayWithZeros;
   */
  //--public static final int ROUND_FLOOR=com.ibm.icu.math.MathContext.ROUND_FLOOR;
  BigDecimal.prototype.ROUND_FLOOR = MathContext.prototype.ROUND_FLOOR;
- 
+
  /**
   * Rounding mode to round to nearest neighbor, where an equidistant
   * value is rounded down.
@@ -369,7 +369,7 @@ BigDecimal.prototype.createArrayWithZeros = createArrayWithZeros;
   */
  //--public static final int ROUND_HALF_DOWN=com.ibm.icu.math.MathContext.ROUND_HALF_DOWN;
  BigDecimal.prototype.ROUND_HALF_DOWN = MathContext.prototype.ROUND_HALF_DOWN;
- 
+
  /**
   * Rounding mode to round to nearest neighbor, where an equidistant
   * value is rounded to the nearest even neighbor.
@@ -378,7 +378,7 @@ BigDecimal.prototype.createArrayWithZeros = createArrayWithZeros;
   */
  //--public static final int ROUND_HALF_EVEN=com.ibm.icu.math.MathContext.ROUND_HALF_EVEN;
  BigDecimal.prototype.ROUND_HALF_EVEN = MathContext.prototype.ROUND_HALF_EVEN;
- 
+
  /**
   * Rounding mode to round to nearest neighbor, where an equidistant
   * value is rounded up.
@@ -387,7 +387,7 @@ BigDecimal.prototype.createArrayWithZeros = createArrayWithZeros;
   */
  //--public static final int ROUND_HALF_UP=com.ibm.icu.math.MathContext.ROUND_HALF_UP;
  BigDecimal.prototype.ROUND_HALF_UP = MathContext.prototype.ROUND_HALF_UP;
- 
+
  /**
   * Rounding mode to assert that no rounding is necessary.
   * @see MathContext#ROUND_UNNECESSARY
@@ -395,7 +395,7 @@ BigDecimal.prototype.createArrayWithZeros = createArrayWithZeros;
   */
  //--public static final int ROUND_UNNECESSARY=com.ibm.icu.math.MathContext.ROUND_UNNECESSARY;
  BigDecimal.prototype.ROUND_UNNECESSARY = MathContext.prototype.ROUND_UNNECESSARY;
- 
+
  /**
   * Rounding mode to round away from zero.
   * @see MathContext#ROUND_UP
@@ -403,7 +403,7 @@ BigDecimal.prototype.createArrayWithZeros = createArrayWithZeros;
   */
  //--public static final int ROUND_UP=com.ibm.icu.math.MathContext.ROUND_UP;
  BigDecimal.prototype.ROUND_UP = MathContext.prototype.ROUND_UP;
- 
+
  /* properties constant private */ // locals
  //--private static final byte ispos=1; // ind: indicates positive (must be 1)
  //--private static final byte iszero=0; // ind: indicates zero     (must be 0)
@@ -412,7 +412,7 @@ BigDecimal.prototype.createArrayWithZeros = createArrayWithZeros;
  BigDecimal.prototype.iszero = 0;
  BigDecimal.prototype.isneg = -1;
  // [later could add NaN, +/- infinity, here]
- 
+
  //--private static final int MinExp=-999999999; // minimum exponent allowed
  //--private static final int MaxExp=999999999; // maximum exponent allowed
  //--private static final int MinArg=-999999999; // minimum argument integer
@@ -421,24 +421,24 @@ BigDecimal.prototype.createArrayWithZeros = createArrayWithZeros;
  BigDecimal.prototype.MaxExp=999999999; // maximum exponent allowed
  BigDecimal.prototype.MinArg=-999999999; // minimum argument integer
  BigDecimal.prototype.MaxArg=999999999; // maximum argument integer
- 
+
  //--private static final com.ibm.icu.math.MathContext plainMC=new com.ibm.icu.math.MathContext(0,com.ibm.icu.math.MathContext.PLAIN); // context for plain unlimited math
  BigDecimal.prototype.plainMC=new MathContext(0, MathContext.prototype.PLAIN);
 
  /* properties constant private unused */ // present but not referenced
- 
+
  // Serialization version
  //--private static final long serialVersionUID=8245355804974198832L;
- 
+
  //--private static final java.lang.String copyright=" Copyright (c) IBM Corporation 1996, 2000.  All rights reserved. ";
- 
+
  /* properties static private */
  // Precalculated constant arrays (used by byteaddsub)
  //--private static byte bytecar[]=new byte[(90+99)+1]; // carry/borrow array
  //--private static byte bytedig[]=diginit(); // next digit array
  BigDecimal.prototype.bytecar = new Array((90+99)+1);
  BigDecimal.prototype.bytedig = diginit();
- 
+
  /**
   * The <code>BigDecimal</code> constant "0".
   *
@@ -470,10 +470,10 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   */
  //--public static final com.ibm.icu.math.BigDecimal TEN=new com.ibm.icu.math.BigDecimal(10);
  BigDecimal.prototype.TEN = new BigDecimal("10");
- 
+
  /* ----- Instance properties [all private and immutable] ----- */
  /* properties private */
- 
+
  /**
   * The indicator. This may take the values:
   * <ul>
@@ -488,7 +488,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
  // Note: some code below assumes IND = Sign [-1, 0, 1], at present.
  // We only need two bits for this, but use a byte [also permits
  // smooth future extension].
- 
+
  /**
   * The formatting style. This may take the values:
   * <ul>
@@ -506,7 +506,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
  //--private byte form=(byte)com.ibm.icu.math.MathContext.PLAIN; // assumed PLAIN
  // We only need two bits for this, at present, but use a byte
  // [again, to allow for smooth future extension]
- 
+
  /**
   * The value of the mantissa.
   * <p>
@@ -523,7 +523,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   * @serial
   */
  //--private byte mant[]; // assumed null
- 
+
  /**
   * The exponent.
   * <p>
@@ -537,11 +537,11 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   */
  //--private int exp;
  // assumed 0
- 
+
  /* ---------------------------------------------------------------- */
  /* Constructors                                                     */
  /* ---------------------------------------------------------------- */
- 
+
  /**
   * Constructs a <code>BigDecimal</code> object from a
   * <code>java.math.BigDecimal</code>.
@@ -560,7 +560,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   * @param bd The <code>BigDecimal</code> to be translated.
   * @stable ICU 2.0
   */
- 
+
  //--public BigDecimal(java.math.BigDecimal bd){
  //-- this(bd.toString());
  //-- return;}
@@ -584,12 +584,12 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   * @param bi The <code>BigInteger</code> to be converted.
   * @stable ICU 2.0
   */
- 
+
  //--public BigDecimal(java.math.BigInteger bi){
  //-- this(bi.toString(10));
  //-- return;}
  // exp remains 0
- 
+
  /**
   * Constructs a <code>BigDecimal</code> object from a
   * <code>BigInteger</code> and a scale.
@@ -614,10 +614,10 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   * @throws NumberFormatException if the scale is negative.
   * @stable ICU 2.0
   */
- 
+
  //--public BigDecimal(java.math.BigInteger bi,int scale){
  //-- this(bi.toString(10));
- //-- if (scale<0) 
+ //-- if (scale<0)
  //--  throw new java.lang.NumberFormatException("Negative scale:"+" "+scale);
  //-- exp=(int)-scale; // exponent is -scale
  //-- return;}
@@ -640,7 +640,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   *                number.
   * @stable ICU 2.0
   */
- 
+
  //--public BigDecimal(char inchars[]){
  //-- this(inchars,0,inchars.length);
  //-- return;}
@@ -668,7 +668,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   *                number for any reason.
   * @stable ICU 2.0
   */
- 
+
  //--public BigDecimal(char inchars[],int offset,int length){super();
  function BigDecimal() {
   //-- members
@@ -734,29 +734,29 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   // 1998.06.25: exponent form built only if E/e in string
   // 1998.06.25: trailing zeros not removed for zero
   // 1999.03.06: no embedded blanks; allow offset and length
-  if (length<=0) 
+  if (length<=0)
    this.bad("BigDecimal(): ", inchars); // bad conversion (empty string)
   // [bad offset will raise array bounds exception]
-  
+
   /* Handle and step past sign */
   this.ind=this.ispos; // assume positive
-  if (inchars[0]==('-')) 
+  if (inchars[0]==('-'))
    {
     length--;
-    if (length==0) 
+    if (length==0)
      this.bad("BigDecimal(): ", inchars); // nothing after sign
     this.ind=this.isneg;
     offset++;
    }
-  else 
-   if (inchars[0]==('+')) 
+  else
+   if (inchars[0]==('+'))
     {
      length--;
-     if (length==0) 
+     if (length==0)
       this.bad("BigDecimal(): ", inchars); // nothing after sign
      offset++;
     }
-  
+
   /* We're at the start of the number */
   exotic=false; // have extra digits
   hadexp=false; // had explicit exponent
@@ -766,23 +766,23 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   {var $1=length;i=offset;i:for(;$1>0;$1--,i++){
    si=inchars[i];
    if (si>='0')  // test for Arabic digit
-    if (si<='9') 
+    if (si<='9')
      {
       last=i;
       d++; // still in mantissa
       continue i;
      }
-   if (si=='.') 
+   if (si=='.')
     { // record and ignore
-     if (dotoff>=0) 
+     if (dotoff>=0)
       this.bad("BigDecimal(): ", inchars); // two dots
      dotoff=i-offset; // offset into mantissa
      continue i;
     }
-   if (si!='e') 
-    if (si!='E') 
+   if (si!='e')
+    if (si!='E')
      { // expect an extra digit
-      if (si<'0' || si>'9') 
+      if (si<'0' || si>'9')
        this.bad("BigDecimal(): ", inchars); // not a number
       // defer the base 10 check until later to avoid extra method call
       exotic=true; // will need conversion later
@@ -792,75 +792,75 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
      }
    /* Found 'e' or 'E' -- now process explicit exponent */
    // 1998.07.11: sign no longer required
-   if ((i-offset)>(length-2)) 
+   if ((i-offset)>(length-2))
     this.bad("BigDecimal(): ", inchars); // no room for even one digit
    eneg=false;
-   if ((inchars[i+1])==('-')) 
+   if ((inchars[i+1])==('-'))
     {
      eneg=true;
      k=i+2;
     }
-   else 
-    if ((inchars[i+1])==('+')) 
+   else
+    if ((inchars[i+1])==('+'))
      k=i+2;
-    else 
+    else
      k=i+1;
    // k is offset of first expected digit
    elen=length-((k-offset)); // possible number of digits
-   if ((elen==0)||(elen>9)) 
+   if ((elen==0)||(elen>9))
     this.bad("BigDecimal(): ", inchars); // 0 or more than 9 digits
    {var $2=elen;j=k;j:for(;$2>0;$2--,j++){
     sj=inchars[j];
-    if (sj<'0') 
+    if (sj<'0')
      this.bad("BigDecimal(): ", inchars); // always bad
-    if (sj>'9') 
+    if (sj>'9')
      { // maybe an exotic digit
-      /*if (si<'0' || si>'9') 
+      /*if (si<'0' || si>'9')
        this.bad(inchars); // not a number
       dvalue=java.lang.Character.digit(sj,10); // check base
-      if (dvalue<0) 
+      if (dvalue<0)
        bad(inchars); // not base 10*/
       this.bad("BigDecimal(): ", inchars);
      }
-    else 
+    else
      dvalue=sj-'0';
     this.exp=(this.exp*10)+dvalue;
     }
    }/*j*/
-   if (eneg) 
+   if (eneg)
     this.exp=-this.exp; // was negative
    hadexp=true; // remember we had one
    break i; // we are done
    }
   }/*i*/
-  
+
   /* Here when all inspected */
-  if (d==0) 
+  if (d==0)
    this.bad("BigDecimal(): ", inchars); // no mantissa digits
-  if (dotoff>=0) 
+  if (dotoff>=0)
    this.exp=(this.exp+dotoff)-d; // adjust exponent if had dot
-  
+
   /* strip leading zeros/dot (leave final if all 0's) */
   {var $3=last-1;i=offset;i:for(;i<=$3;i++){
    si=inchars[i];
-   if (si=='0') 
+   if (si=='0')
     {
      offset++;
      dotoff--;
      d--;
     }
-   else 
-    if (si=='.') 
+   else
+    if (si=='.')
      {
       offset++; // step past dot
       dotoff--;
      }
-    else 
-     if (si<='9') 
+    else
+     if (si<='9')
       break i;/* non-0 */
-     else 
+     else
       {/* exotic */
-       //if ((java.lang.Character.digit(si,10))!=0) 
+       //if ((java.lang.Character.digit(si,10))!=0)
         break i; // non-0 or bad
        // is 0 .. strip like '0'
        //offset++;
@@ -869,22 +869,22 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
       }
    }
   }/*i*/
-  
+
   /* Create the mantissa array */
   this.mant=new Array(d); // we know the length
   j=offset; // input offset
-  if (exotic) 
+  if (exotic)
    {exotica:do{ // slow: check for exotica
     {var $4=d;i=0;i:for(;$4>0;$4--,i++){
-     if (i==dotoff) 
+     if (i==dotoff)
       j++; // at dot
      sj=inchars[j];
-     if (sj<='9') 
+     if (sj<='9')
       this.mant[i]=sj-'0';/* easy */
-     else 
+     else
       {
        //dvalue=java.lang.Character.digit(sj,10);
-       //if (dvalue<0) 
+       //if (dvalue<0)
         this.bad("BigDecimal(): ", inchars); // not a number after all
        //mant[i]=(byte)dvalue;
       }
@@ -892,45 +892,45 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
      }
     }/*i*/
    }while(false);}/*exotica*/
-  else 
+  else
    {simple:do{
     {var $5=d;i=0;i:for(;$5>0;$5--,i++){
-     if (i==dotoff) 
+     if (i==dotoff)
       j++;
      this.mant[i]=inchars[j]-'0';
      j++;
      }
     }/*i*/
    }while(false);}/*simple*/
-  
+
   /* Looks good.  Set the sign indicator and form, as needed. */
   // Trailing zeros are preserved
   // The rule here for form is:
   //   If no E-notation, then request plain notation
   //   Otherwise act as though add(0,DEFAULT) and request scientific notation
   // [form is already PLAIN]
-  if (this.mant[0]==0) 
+  if (this.mant[0]==0)
    {
     this.ind=this.iszero; // force to show zero
     // negative exponent is significant (e.g., -3 for 0.000) if plain
-    if (this.exp>0) 
+    if (this.exp>0)
      this.exp=0; // positive exponent can be ignored
-    if (hadexp) 
+    if (hadexp)
      { // zero becomes single digit from add
       this.mant=this.ZERO.mant;
       this.exp=0;
      }
    }
-  else 
+  else
    { // non-zero
     // [ind was set earlier]
     // now determine form
-    if (hadexp) 
+    if (hadexp)
      {
       this.form=MathContext.prototype.SCIENTIFIC;
       // 1999.06.29 check for overflow
       mag=(this.exp+this.mant.length)-1; // true exponent in scientific notation
-      if ((mag<this.MinExp)||(mag>this.MaxExp)) 
+      if ((mag<this.MinExp)||(mag>this.MaxExp))
        this.bad("BigDecimal(): ", inchars);
      }
    }
@@ -960,7 +960,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   *            not a number.
   * @stable ICU 2.0
   */
- 
+
  //--public BigDecimal(double num){
  //-- // 1999.03.06: use exactly the old algorithm
  //-- // 2000.01.01: note that this constructor does give an exact result,
@@ -983,13 +983,13 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   * @param num The <code>int</code> to be converted.
   * @stable ICU 2.0
   */
- 
+
  //--public BigDecimal(int num){super();
  //-- int mun;
  //-- int i=0;
  //-- // We fastpath commoners
- //-- if (num<=9) 
- //--  if (num>=(-9)) 
+ //-- if (num<=9)
+ //--  if (num>=(-9))
  //--   {singledigit:do{
  //--    // very common single digit case
  //--    {/*select*/
@@ -1011,12 +1011,12 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
  //--    else{
  //--     {
  //--      mant=new byte[1];
- //--      if (num>0) 
+ //--      if (num>0)
  //--       {
  //--        mant[0]=(byte)num;
  //--        ind=ispos;
  //--       }
- //--      else 
+ //--      else
  //--       { // num<-1
  //--        mant[0]=(byte)((int)-num);
  //--        ind=isneg;
@@ -1026,14 +1026,14 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
  //--    }
  //--    return;
  //--   }while(false);}/*singledigit*/
- //-- 
+ //--
  //-- /* We work on negative numbers so we handle the most negative number */
- //-- if (num>0) 
+ //-- if (num>0)
  //--  {
  //--   ind=ispos;
  //--   num=(int)-num;
  //--  }
- //-- else 
+ //-- else
  //--  ind=isneg;/* negative */ // [0 case already handled]
  //-- // [it is quicker, here, to pre-calculate the length with
  //-- // one loop, then allocate exactly the right length of byte array,
@@ -1041,7 +1041,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
  //-- mun=num; // working copy
  //-- {i=9;i:for(;;i--){
  //--  mun=mun/10;
- //--  if (mun==0) 
+ //--  if (mun==0)
  //--   break i;
  //--  }
  //-- }/*i*/
@@ -1050,7 +1050,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
  //-- {i=(10-i)-1;i:for(;;i--){
  //--  mant[i]=(byte)-(((byte)(num%10)));
  //--  num=num/10;
- //--  if (num==0) 
+ //--  if (num==0)
  //--   break i;
  //--  }
  //-- }/*i*/
@@ -1071,7 +1071,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   * @param num The <code>long</code> to be converted.
   * @stable ICU 2.0
   */
- 
+
  //--public BigDecimal(long num){super();
  //-- long mun;
  //-- int i=0;
@@ -1079,20 +1079,20 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
  //-- // we use this to construct the static constants].
  //-- // This is much faster than: this(String.valueOf(num).toCharArray())
  //-- /* We work on negative num so we handle the most negative number */
- //-- if (num>0) 
+ //-- if (num>0)
  //--  {
  //--   ind=ispos;
  //--   num=(long)-num;
  //--  }
- //-- else 
- //--  if (num==0) 
+ //-- else
+ //--  if (num==0)
  //--   ind=iszero;
- //--  else 
+ //--  else
  //--   ind=isneg;/* negative */
  //-- mun=num;
  //-- {i=18;i:for(;;i--){
  //--  mun=mun/10;
- //--  if (mun==0) 
+ //--  if (mun==0)
  //--   break i;
  //--  }
  //-- }/*i*/
@@ -1101,7 +1101,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
  //-- {i=(19-i)-1;i:for(;;i--){
  //--  mant[i]=(byte)-(((byte)(num%10)));
  //--  num=num/10;
- //--  if (num==0) 
+ //--  if (num==0)
  //--   break i;
  //--  }
  //-- }/*i*/
@@ -1165,13 +1165,13 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   * number.
   * @stable ICU 2.0
   */
- 
+
  //--public BigDecimal(java.lang.String string){
  //-- this(string.toCharArray(),0,string.length());
  //-- return;}
 
  /* <sgml> Make a default BigDecimal object for local use. </sgml> */
- 
+
  //--private BigDecimal(){super();
  //-- return;
  //-- }
@@ -1179,7 +1179,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
  /* ---------------------------------------------------------------- */
  /* Operator methods [methods which take a context parameter]        */
  /* ---------------------------------------------------------------- */
- 
+
  /**
   * Returns a plain <code>BigDecimal</code> whose value is the absolute
   * value of this <code>BigDecimal</code>.
@@ -1194,7 +1194,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   *         value of this <code>BigDecimal</code>.
   * @stable ICU 2.0
   */
- 
+
  //--public com.ibm.icu.math.BigDecimal abs(){
  //- return this.abs(plainMC);
  //- }
@@ -1215,7 +1215,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   *             value of this <code>BigDecimal</code>.
   * @stable ICU 2.0
   */
- 
+
  //--public com.ibm.icu.math.BigDecimal abs(com.ibm.icu.math.MathContext set){
  function abs() {
   var set;
@@ -1231,7 +1231,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
    {
     throw "abs(): " + abs.arguments.length + " arguments given; expected 0 or 1"
    }
-  if (this.ind==this.isneg) 
+  if (this.ind==this.isneg)
    return this.negate(set);
   return this.plus(set);
   }
@@ -1253,7 +1253,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   *             <code>this+rhs</code>, using fixed point arithmetic.
   * @stable ICU 2.0
   */
- 
+
  //--public com.ibm.icu.math.BigDecimal add(com.ibm.icu.math.BigDecimal rhs){
  //-- return this.add(rhs,plainMC);
  //-- }
@@ -1273,7 +1273,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   *             <code>this+rhs</code>.
   * @stable ICU 2.0
   */
- 
+
  //--public com.ibm.icu.math.BigDecimal add(com.ibm.icu.math.BigDecimal rhs,com.ibm.icu.math.MathContext set){
  function add() {
   var set;
@@ -1325,32 +1325,32 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   //--byte cb=0;
   var cb=0;
   /* determine requested digits and form */
-  if (set.lostDigits) 
+  if (set.lostDigits)
    this.checkdigits(rhs,set.digits);
   lhs=this; // name for clarity and proxy
-  
+
   /* Quick exit for add floating 0 */
   // plus() will optimize to return same object if possible
-  if (lhs.ind==0) 
-   if (set.form!=MathContext.prototype.PLAIN) 
+  if (lhs.ind==0)
+   if (set.form!=MathContext.prototype.PLAIN)
     return rhs.plus(set);
-  if (rhs.ind==0) 
-   if (set.form!=MathContext.prototype.PLAIN) 
+  if (rhs.ind==0)
+   if (set.form!=MathContext.prototype.PLAIN)
     return lhs.plus(set);
-  
+
   /* Prepare numbers (round, unless unlimited precision) */
   reqdig=set.digits; // local copy (heavily used)
-  if (reqdig>0) 
+  if (reqdig>0)
    {
-    if (lhs.mant.length>reqdig) 
+    if (lhs.mant.length>reqdig)
      lhs=this.clone(lhs).round(set);
-    if (rhs.mant.length>reqdig) 
+    if (rhs.mant.length>reqdig)
      rhs=this.clone(rhs).round(set);
    // [we could reuse the new LHS for result in this case]
    }
-  
+
   res=new BigDecimal(); // build result here
-  
+
   /* Now see how much we have to pad or truncate lhs or rhs in order
      to align the numbers.  If one number is much larger than the
      other, then the smaller cannot affect the answer [but we may
@@ -1374,14 +1374,14 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
     /* If, after pad, lhs would be longer than rhs by digits+1 or
        more (and digits>0) then rhs cannot affect answer, so we only
        need to pad up to a length of DIGITS+1. */
-    if (newlen>=((userlen+reqdig)+1)) 
-     if (reqdig>0) 
+    if (newlen>=((userlen+reqdig)+1))
+     if (reqdig>0)
       {
        // LHS is sufficient
        res.mant=usel;
        res.exp=lhs.exp;
        res.ind=lhs.ind;
-       if (usellen<reqdig) 
+       if (usellen<reqdig)
         { // need 0 padding
          res.mant=this.extend(lhs.mant,reqdig);
          res.exp=res.exp-((reqdig-usellen));
@@ -1390,8 +1390,8 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
       }
     // RHS may affect result
     res.exp=rhs.exp; // expected final exponent
-    if (newlen>(reqdig+1)) 
-     if (reqdig>0) 
+    if (newlen>(reqdig+1))
+     if (reqdig>0)
       {
        // LHS will be max; RHS truncated
        tlen=(newlen-reqdig)-1; // truncation length
@@ -1399,19 +1399,19 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
        res.exp=res.exp+tlen;
        newlen=reqdig+1;
       }
-    if (newlen>usellen) 
+    if (newlen>usellen)
      usellen=newlen; // need to pad LHS
    }
   else{ // need to pad rhs and/or truncate lhs
    newlen=(userlen+rhs.exp)-lhs.exp;
-   if (newlen>=((usellen+reqdig)+1)) 
-    if (reqdig>0) 
+   if (newlen>=((usellen+reqdig)+1))
+    if (reqdig>0)
      {
       // RHS is sufficient
       res.mant=user;
       res.exp=rhs.exp;
       res.ind=rhs.ind;
-      if (userlen<reqdig) 
+      if (userlen<reqdig)
        { // need 0 padding
         res.mant=this.extend(rhs.mant,reqdig);
         res.exp=res.exp-((reqdig-userlen));
@@ -1420,8 +1420,8 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
      }
    // LHS may affect result
    res.exp=lhs.exp; // expected final exponent
-   if (newlen>(reqdig+1)) 
-    if (reqdig>0) 
+   if (newlen>(reqdig+1))
+    if (reqdig>0)
      {
       // RHS will be max; LHS truncated
       tlen=(newlen-reqdig)-1; // truncation length
@@ -1429,22 +1429,22 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
       res.exp=res.exp+tlen;
       newlen=reqdig+1;
      }
-   if (newlen>userlen) 
+   if (newlen>userlen)
     userlen=newlen; // need to pad RHS
   }
   }while(false);}/*padder*/
-  
+
   /* OK, we have aligned mantissas.  Now add or subtract. */
   // 1998.06.27 Sign may now be 0 [e.g., 0.000] .. treat as positive
   // 1999.05.27 Allow for 00 on lhs [is not larger than 2 on rhs]
   // 1999.07.10 Allow for 00 on rhs [is not larger than 2 on rhs]
-  if (lhs.ind==this.iszero) 
+  if (lhs.ind==this.iszero)
    res.ind=this.ispos;
-  else 
+  else
    res.ind=lhs.ind; // likely sign, all paths
   if (((lhs.ind==this.isneg)?1:0)==((rhs.ind==this.isneg)?1:0))  // same sign, 0 non-negative
    mult=1;
-  else 
+  else
    {signdiff:do{ // different signs, so subtraction is needed
     mult=-1; // will cause subtract
     /* Before we can subtract we must determine which is the larger,
@@ -1473,26 +1473,26 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
       ea=usel.length-1;
       eb=user.length-1;
       {compare:for(;;){
-       if (ia<=ea) 
+       if (ia<=ea)
         ca=usel[ia];
-       else 
+       else
         {
-         if (ib>eb) 
+         if (ib>eb)
           {/* identical */
-           if (set.form!=MathContext.prototype.PLAIN) 
+           if (set.form!=MathContext.prototype.PLAIN)
             return this.ZERO;
            // [if PLAIN we must do the subtract, in case of 0.000 results]
            break compare;
           }
          ca=0;
         }
-       if (ib<=eb) 
+       if (ib<=eb)
         cb=user[ib];
-       else 
+       else
         cb=0;
-       if (ca!=cb) 
+       if (ca!=cb)
         {
-         if (ca<cb) 
+         if (ca<cb)
           {/* swap needed */
            t=usel;
            usel=user;
@@ -1513,12 +1513,12 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
     }
     }while(false);}/*swaptest*/
    }while(false);}/*signdiff*/
-  
+
   /* here, A is > B if subtracting */
   // add [A+B*1] or subtract [A+(B*-1)]
   res.mant=this.byteaddsub(usel,usellen,user,userlen,mult,false);
   // [reuse possible only after chop; accounting makes not worthwhile]
-  
+
   // Finish() rounds before stripping leading 0's, then sets form, etc.
   return res.finish(set,false);
   }
@@ -1539,7 +1539,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   * @see    #compareTo(Object)
   * @stable ICU 2.0
   */
- 
+
  //--public int compareTo(com.ibm.icu.math.BigDecimal rhs){
  //-- return this.compareTo(rhs,plainMC);
  //-- }
@@ -1575,7 +1575,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   * @see    #compareTo(Object)
   * @stable ICU 2.0
   */
- 
+
  //public int compareTo(com.ibm.icu.math.BigDecimal rhs,com.ibm.icu.math.MathContext set){
  function compareTo() {
   var set;
@@ -1599,25 +1599,25 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   //--com.ibm.icu.math.BigDecimal newrhs;
   var newrhs;
   // rhs=null will raise NullPointerException, as per Comparable interface
-  if (set.lostDigits) 
+  if (set.lostDigits)
    this.checkdigits(rhs,set.digits);
   // [add will recheck in slowpath cases .. but would report -rhs]
-  if ((this.ind==rhs.ind)&&(this.exp==rhs.exp)) 
+  if ((this.ind==rhs.ind)&&(this.exp==rhs.exp))
    {
     /* sign & exponent the same [very common] */
     thislength=this.mant.length;
-    if (thislength<rhs.mant.length) 
+    if (thislength<rhs.mant.length)
      return -this.ind;
-    if (thislength>rhs.mant.length) 
+    if (thislength>rhs.mant.length)
      return this.ind;
     /* lengths are the same; we can do a straight mantissa compare
        unless maybe rounding [rounding is very unusual] */
-    if ((thislength<=set.digits)||(set.digits==0)) 
+    if ((thislength<=set.digits)||(set.digits==0))
      {
       {var $6=thislength;i=0;i:for(;$6>0;$6--,i++){
-       if (this.mant[i]<rhs.mant[i]) 
+       if (this.mant[i]<rhs.mant[i])
         return -this.ind;
-       if (this.mant[i]>rhs.mant[i]) 
+       if (this.mant[i]>rhs.mant[i])
         return this.ind;
        }
       }/*i*/
@@ -1625,12 +1625,12 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
      }
    /* drop through for full comparison */
    }
-  else 
+  else
    {
     /* More fastpaths possible */
-    if (this.ind<rhs.ind) 
+    if (this.ind<rhs.ind)
      return -1;
-    if (this.ind>rhs.ind) 
+    if (this.ind>rhs.ind)
      return 1;
    }
   /* carry out a subtract to make the comparison */
@@ -1658,7 +1658,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   * @throws ArithmeticException if <code>rhs</code> is zero.
   * @stable ICU 2.0
   */
- 
+
  //--public com.ibm.icu.math.BigDecimal divide(com.ibm.icu.math.BigDecimal rhs){
  //-- return this.dodivide('D',rhs,plainMC,-1);
  //-- }
@@ -1693,7 +1693,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   *               represent the result exactly.
   * @stable ICU 2.0
   */
- 
+
  //--public com.ibm.icu.math.BigDecimal divide(com.ibm.icu.math.BigDecimal rhs,int round){
  //-- com.ibm.icu.math.MathContext set;
  //-- set=new com.ibm.icu.math.MathContext(0,com.ibm.icu.math.MathContext.PLAIN,false,round); // [checks round, too]
@@ -1733,10 +1733,10 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   *               is insufficient to represent the result exactly.
   * @stable ICU 2.0
   */
- 
+
  //--public com.ibm.icu.math.BigDecimal divide(com.ibm.icu.math.BigDecimal rhs,int scale,int round){
  //-- com.ibm.icu.math.MathContext set;
- //-- if (scale<0) 
+ //-- if (scale<0)
  //--  throw new java.lang.ArithmeticException("Negative scale:"+" "+scale);
  //-- set=new com.ibm.icu.math.MathContext(0,com.ibm.icu.math.MathContext.PLAIN,false,round); // [checks round]
  //-- return this.dodivide('D',rhs,set,scale);
@@ -1758,7 +1758,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   * @throws ArithmeticException if <code>rhs</code> is zero.
   * @stable ICU 2.0
   */
- 
+
  //--public com.ibm.icu.math.BigDecimal divide(com.ibm.icu.math.BigDecimal rhs,com.ibm.icu.math.MathContext set){
  function divide() {
   var set;
@@ -1777,7 +1777,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   else if (divide.arguments.length == 3)
    {
     scale = divide.arguments[1];
-    if (scale<0) 
+    if (scale<0)
      throw "divide(): Negative scale: "+scale;
     set=new MathContext(0,MathContext.prototype.PLAIN,false,divide.arguments[2]); // [checks round]
    }
@@ -1808,7 +1808,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   * @throws ArithmeticException if <code>rhs</code> is zero.
   * @stable ICU 2.0
   */
- 
+
  //--public com.ibm.icu.math.BigDecimal divideInteger(com.ibm.icu.math.BigDecimal rhs){
  //-- // scale 0 to drop .000 when plain
  //-- return this.dodivide('I',rhs,plainMC,0);
@@ -1833,7 +1833,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   *             number of digits specified for the context.
   * @stable ICU 2.0
   */
- 
+
  //--public com.ibm.icu.math.BigDecimal divideInteger(com.ibm.icu.math.BigDecimal rhs,com.ibm.icu.math.MathContext set){
  function divideInteger() {
   var set;
@@ -1853,7 +1853,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   // scale 0 to drop .000 when plain
   return this.dodivide('I',rhs,set,0);
   }
- 
+
  /**
   * Returns a plain <code>BigDecimal</code> whose value is
   * the maximum of <code>this</code> and <code>rhs</code>.
@@ -1868,7 +1868,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   *             the maximum of <code>this</code> and <code>rhs</code>.
   * @stable ICU 2.0
   */
- 
+
  //--public com.ibm.icu.math.BigDecimal max(com.ibm.icu.math.BigDecimal rhs){
  //-- return this.max(rhs,plainMC);
  //-- }
@@ -1895,7 +1895,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   *             the maximum of <code>this</code> and <code>rhs</code>.
   * @stable ICU 2.0
   */
- 
+
  //--public com.ibm.icu.math.BigDecimal max(com.ibm.icu.math.BigDecimal rhs,com.ibm.icu.math.MathContext set){
  function max() {
   var set;
@@ -1912,12 +1912,12 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
     throw "max(): " + max.arguments.length + " arguments given; expected 1 or 2"
    }
   var rhs = max.arguments[0];
-  if ((this.compareTo(rhs,set))>=0) 
+  if ((this.compareTo(rhs,set))>=0)
    return this.plus(set);
-  else 
+  else
    return rhs.plus(set);
   }
- 
+
  /**
   * Returns a plain <code>BigDecimal</code> whose value is
   * the minimum of <code>this</code> and <code>rhs</code>.
@@ -1932,7 +1932,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   *             the minimum of <code>this</code> and <code>rhs</code>.
   * @stable ICU 2.0
   */
- 
+
  //--public com.ibm.icu.math.BigDecimal min(com.ibm.icu.math.BigDecimal rhs){
  //-- return this.min(rhs,plainMC);
  //-- }
@@ -1959,7 +1959,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   *             the minimum of <code>this</code> and <code>rhs</code>.
   * @stable ICU 2.0
   */
- 
+
  //--public com.ibm.icu.math.BigDecimal min(com.ibm.icu.math.BigDecimal rhs,com.ibm.icu.math.MathContext set){
  function min() {
   var set;
@@ -1976,12 +1976,12 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
     throw "min(): " + min.arguments.length + " arguments given; expected 1 or 2"
    }
   var rhs = min.arguments[0];
-  if ((this.compareTo(rhs,set))<=0) 
+  if ((this.compareTo(rhs,set))<=0)
    return this.plus(set);
-  else 
+  else
    return rhs.plus(set);
   }
- 
+
  /**
   * Returns a plain <code>BigDecimal</code> whose value is
   * <code>this*rhs</code>, using fixed point arithmetic.
@@ -2000,7 +2000,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   *             <code>this*rhs</code>, using fixed point arithmetic.
   * @stable ICU 2.0
   */
- 
+
  //--public com.ibm.icu.math.BigDecimal multiply(com.ibm.icu.math.BigDecimal rhs){
  //-- return this.multiply(rhs,plainMC);
  //-- }
@@ -2020,7 +2020,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   *             <code>this*rhs</code>.
   * @stable ICU 2.0
   */
- 
+
  //--public com.ibm.icu.math.BigDecimal multiply(com.ibm.icu.math.BigDecimal rhs,com.ibm.icu.math.MathContext set){
  function multiply() {
   var set;
@@ -2059,54 +2059,54 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   var n=0;
   //--byte mult=0;
   var mult=0;
-  if (set.lostDigits) 
+  if (set.lostDigits)
    this.checkdigits(rhs,set.digits);
   lhs=this; // name for clarity and proxy
-  
+
   /* Prepare numbers (truncate, unless unlimited precision) */
   padding=0; // trailing 0's to add
   reqdig=set.digits; // local copy
-  if (reqdig>0) 
+  if (reqdig>0)
    {
-    if (lhs.mant.length>reqdig) 
+    if (lhs.mant.length>reqdig)
      lhs=this.clone(lhs).round(set);
-    if (rhs.mant.length>reqdig) 
+    if (rhs.mant.length>reqdig)
      rhs=this.clone(rhs).round(set);
    // [we could reuse the new LHS for result in this case]
    }
-  else 
+  else
    {/* unlimited */
     // fixed point arithmetic will want every trailing 0; we add these
     // after the calculation rather than before, for speed.
-    if (lhs.exp>0) 
+    if (lhs.exp>0)
      padding=padding+lhs.exp;
-    if (rhs.exp>0) 
+    if (rhs.exp>0)
      padding=padding+rhs.exp;
    }
-  
+
   // For best speed, as in DMSRCN, we use the shorter number as the
   // multiplier and the longer as the multiplicand.
   // 1999.12.22: We used to special case when the result would fit in
   //             a long, but with Java 1.3 this gave no advantage.
-  if (lhs.mant.length<rhs.mant.length) 
+  if (lhs.mant.length<rhs.mant.length)
    {
     multer=lhs.mant;
     multand=rhs.mant;
    }
-  else 
+  else
    {
     multer=rhs.mant;
     multand=lhs.mant;
    }
-  
+
   /* Calculate how long result byte array will be */
   multandlen=(multer.length+multand.length)-1; // effective length
   // optimize for 75% of the cases where a carry is expected...
-  if ((multer[0]*multand[0])>9) 
+  if ((multer[0]*multand[0])>9)
    acclen=multandlen+1;
-  else 
+  else
    acclen=multandlen;
-  
+
   /* Now the main long multiplication loop */
   res=new BigDecimal(); // where we'll build result
   acc=this.createArrayWithZeros(acclen); // accumulator, all zeros
@@ -2116,7 +2116,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   // Initial number therefore has virtual zeros added to right.
   {var $7=multer.length;n=0;n:for(;$7>0;$7--,n++){
    mult=multer[n];
-   if (mult!=0) 
+   if (mult!=0)
     { // [optimization]
      // accumulate [accumulator is reusable array]
      acc=this.byteaddsub(acc,acc.length,multand,multandlen,mult,true);
@@ -2125,15 +2125,15 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
    multandlen--; // 'virtual length'
    }
   }/*n*/
-  
+
   res.ind=lhs.ind*rhs.ind; // final sign
   res.exp=(lhs.exp+rhs.exp)-padding; // final exponent
   // [overflow is checked by finish]
-  
+
   /* add trailing zeros to the result, if necessary */
-  if (padding==0) 
+  if (padding==0)
    res.mant=acc;
-  else 
+  else
    res.mant=this.extend(acc,acc.length+padding); // add trailing 0s
   return res.finish(set,false);
   }
@@ -2153,7 +2153,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   *         <code>-this</code>.
   * @stable ICU 2.0
   */
- 
+
  //--public com.ibm.icu.math.BigDecimal negate(){
  //-- return this.negate(plainMC);
  //-- }
@@ -2171,7 +2171,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   *         <code>-this</code>.
   * @stable ICU 2.0
   */
- 
+
  //public com.ibm.icu.math.BigDecimal negate(com.ibm.icu.math.MathContext set){
  function negate() {
   var set;
@@ -2191,7 +2191,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   var res;
   // Originally called minus(), changed to matched Java precedents
   // This simply clones, flips the sign, and possibly rounds
-  if (set.lostDigits) 
+  if (set.lostDigits)
    this.checkdigits(null,set.digits);
   res=this.clone(this); // safe copy
   res.ind=-res.ind;
@@ -2214,7 +2214,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   *         <code>+this</code>.
   * @stable ICU 2.0
   */
- 
+
  //--public com.ibm.icu.math.BigDecimal plus(){
  //-- return this.plus(plainMC);
  //-- }
@@ -2236,7 +2236,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   *         <code>+this</code>.
   * @stable ICU 2.0
   */
- 
+
  //public com.ibm.icu.math.BigDecimal plus(com.ibm.icu.math.MathContext set){
  function plus() {
   var set;
@@ -2254,20 +2254,20 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
    }
   // This clones and forces the result to the new settings
   // May return same object
-  if (set.lostDigits) 
+  if (set.lostDigits)
    this.checkdigits(null,set.digits);
   // Optimization: returns same object for some common cases
-  if (set.form==MathContext.prototype.PLAIN) 
-   if (this.form==MathContext.prototype.PLAIN) 
+  if (set.form==MathContext.prototype.PLAIN)
+   if (this.form==MathContext.prototype.PLAIN)
     {
-     if (this.mant.length<=set.digits) 
+     if (this.mant.length<=set.digits)
       return this;
-     if (set.digits==0) 
+     if (set.digits==0)
       return this;
     }
   return this.clone(this).finish(set,false);
   }
- 
+
  /**
   * Returns a plain <code>BigDecimal</code> whose value is
   * <code>this**rhs</code>, using fixed point arithmetic.
@@ -2294,13 +2294,13 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   *             is not a whole number.
   * @stable ICU 2.0
   */
- 
+
  //--public com.ibm.icu.math.BigDecimal pow(com.ibm.icu.math.BigDecimal rhs){
  //-- return this.pow(rhs,plainMC);
  //-- }
  // The name for this method is inherited from the precedent set by the
  // BigInteger and Math classes.
- 
+
  /**
   * Returns a <code>BigDecimal</code> whose value is <code>this**rhs</code>.
   * <p>
@@ -2327,7 +2327,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   *             is not a whole number.
   * @stable ICU 2.0
   */
- 
+
  //--public com.ibm.icu.math.BigDecimal pow(com.ibm.icu.math.BigDecimal rhs,com.ibm.icu.math.MathContext set){
  function pow() {
   var set;
@@ -2362,56 +2362,56 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   var seenbit;
   //--int i=0;
   var i=0;
-  if (set.lostDigits) 
+  if (set.lostDigits)
    this.checkdigits(rhs,set.digits);
   n=rhs.intcheck(this.MinArg,this.MaxArg); // check RHS by the rules
   lhs=this; // clarified name
-  
+
   reqdig=set.digits; // local copy (heavily used)
-  if (reqdig==0) 
+  if (reqdig==0)
    {
-    if (rhs.ind==this.isneg) 
+    if (rhs.ind==this.isneg)
      //--throw new java.lang.ArithmeticException("Negative power:"+" "+rhs.toString());
      throw "pow(): Negative power: " + rhs.toString()
     workdigits=0;
    }
-  else 
+  else
    {/* non-0 digits */
-    if ((rhs.mant.length+rhs.exp)>reqdig) 
+    if ((rhs.mant.length+rhs.exp)>reqdig)
      //--throw new java.lang.ArithmeticException("Too many digits:"+" "+rhs.toString());
      throw "pow(): Too many digits: " + rhs.toString()
-    
+
     /* Round the lhs to DIGITS if need be */
-    if (lhs.mant.length>reqdig) 
+    if (lhs.mant.length>reqdig)
      lhs=this.clone(lhs).round(set);
-    
+
     /* L for precision calculation [see ANSI X3.274-1996] */
     L=rhs.mant.length+rhs.exp; // length without decimal zeros/exp
     workdigits=(reqdig+L)+1; // calculate the working DIGITS
    }
-  
+
   /* Create a copy of set for working settings */
   // Note: no need to check for lostDigits again.
   // 1999.07.17 Note: this construction must follow RHS check
   workset=new MathContext(workdigits,set.form,false,set.roundingMode);
-  
+
   res=this.ONE; // accumulator
-  if (n==0) 
+  if (n==0)
    return res; // x**0 == 1
-  if (n<0) 
+  if (n<0)
    n=-n; // [rhs.ind records the sign]
   seenbit=false; // set once we've seen a 1-bit
   {i=1;i:for(;;i++){ // for each bit [top bit ignored]
    //n=n+n; // shift left 1 bit
    n<<=1;
-   if (n<0) 
+   if (n<0)
     { // top bit is set
      seenbit=true; // OK, we're off
      res=res.multiply(lhs,workset); // acc=acc*x
     }
-   if (i==31) 
+   if (i==31)
     break i; // that was the last bit
-   if ((!seenbit)) 
+   if ((!seenbit))
     continue i; // we don't have to square 1
    res=res.multiply(res,workset); // acc=acc*acc [square]
    }
@@ -2438,7 +2438,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   * @throws ArithmeticException if <code>rhs</code> is zero.
   * @stable ICU 2.0
   */
- 
+
  //--public com.ibm.icu.math.BigDecimal remainder(com.ibm.icu.math.BigDecimal rhs){
  //-- return this.dodivide('R',rhs,plainMC,-1);
  //-- }
@@ -2465,7 +2465,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   *             context.
   * @stable ICU 2.0
   */
- 
+
  //--public com.ibm.icu.math.BigDecimal remainder(com.ibm.icu.math.BigDecimal rhs,com.ibm.icu.math.MathContext set){
  function remainder() {
   var set;
@@ -2502,7 +2502,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   *             <code>this-rhs</code>, using fixed point arithmetic.
   * @stable ICU 2.0
   */
- 
+
  //--public com.ibm.icu.math.BigDecimal subtract(com.ibm.icu.math.BigDecimal rhs){
  //-- return this.subtract(rhs,plainMC);
  //-- }
@@ -2522,7 +2522,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   *             <code>this-rhs</code>.
   * @stable ICU 2.0
   */
- 
+
  //--public com.ibm.icu.math.BigDecimal subtract(com.ibm.icu.math.BigDecimal rhs,com.ibm.icu.math.MathContext set){
  function subtract() {
   var set;
@@ -2541,7 +2541,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   var rhs = subtract.arguments[0];
   //--com.ibm.icu.math.BigDecimal newrhs;
   var newrhs;
-  if (set.lostDigits) 
+  if (set.lostDigits)
    this.checkdigits(rhs,set.digits);
   // [add will recheck .. but would report -rhs]
   /* carry out the subtraction */
@@ -2554,7 +2554,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
  /* ---------------------------------------------------------------- */
  /* Other methods                                                    */
  /* ---------------------------------------------------------------- */
- 
+
  /**
   * Converts this <code>BigDecimal</code> to a <code>byte</code>.
   * If the <code>BigDecimal</code> has a non-zero decimal part or is
@@ -2566,11 +2566,11 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   *                 decimal part, or will not fit in a <code>byte</code>.
   * @stable ICU 2.0
   */
- 
+
  //--public byte byteValueExact(){
  //-- int num;
  //-- num=this.intValueExact(); // will check decimal part too
- //-- if ((num>127)|(num<(-128))) 
+ //-- if ((num>127)|(num<(-128)))
  //--  throw new java.lang.ArithmeticException("Conversion overflow:"+" "+this.toString());
  //-- return (byte)num;
  //-- }
@@ -2597,7 +2597,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   * @see    #compareTo(BigDecimal)
   * @stable ICU 2.0
   */
- 
+
  //--public int compareTo(java.lang.Object rhsobj){
  //-- // the cast in the next line will raise ClassCastException if necessary
  //-- return compareTo((com.ibm.icu.math.BigDecimal)rhsobj,plainMC);
@@ -2618,7 +2618,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   * @return A <code>double</code> corresponding to <code>this</code>.
   * @stable ICU 2.0
   */
- 
+
  //--public double doubleValue(){
  //-- // We go via a String [as does BigDecimal in JDK 1.2]
  //-- // Next line could possibly raise NumberFormatException
@@ -2651,7 +2651,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   * @see    #compareTo(BigDecimal)
   * @see    #compareTo(BigDecimal, MathContext)
   */
- 
+
  //--public boolean equals(java.lang.Object obj){
  function equals(obj) {
   //--com.ibm.icu.math.BigDecimal rhs;
@@ -2663,32 +2663,32 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   //--char rca[]=null;
   var rca=null;
   // We are equal iff toString of both are exactly the same
-  if (obj==null) 
+  if (obj==null)
    return false; // not equal
-  if ((!(((obj instanceof BigDecimal))))) 
+  if ((!(((obj instanceof BigDecimal)))))
    return false; // not a decimal
   rhs=obj; // cast; we know it will work
-  if (this.ind!=rhs.ind) 
+  if (this.ind!=rhs.ind)
    return false; // different signs never match
-  if (((this.mant.length==rhs.mant.length)&&(this.exp==rhs.exp))&&(this.form==rhs.form)) 
-   
+  if (((this.mant.length==rhs.mant.length)&&(this.exp==rhs.exp))&&(this.form==rhs.form))
+
    { // mantissas say all
     // here with equal-length byte arrays to compare
     {var $8=this.mant.length;i=0;i:for(;$8>0;$8--,i++){
-     if (this.mant[i]!=rhs.mant[i]) 
+     if (this.mant[i]!=rhs.mant[i])
       return false;
      }
     }/*i*/
    }
-  else 
+  else
    { // need proper layout
     lca=this.layout(); // layout to character array
     rca=rhs.layout();
-    if (lca.length!=rca.length) 
+    if (lca.length!=rca.length)
      return false; // mismatch
     // here with equal-length character arrays to compare
     {var $9=lca.length;i=0;i:for(;$9>0;$9--,i++){
-     if (lca[i]!=rca[i]) 
+     if (lca[i]!=rca[i])
       return false;
      }
     }/*i*/
@@ -2711,7 +2711,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   * @return A <code>float</code> corresponding to <code>this</code>.
   * @stable ICU 2.0
   */
- 
+
  //--public float floatValue(){
  //-- return java.lang.Float.valueOf(this.toString()).floatValue();
  //-- }
@@ -2777,7 +2777,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   * @see    #toString
   * @see    #toCharArray
   */
- 
+
  //--public java.lang.String format(int before,int after){
  //-- return format(before,after,-1,-1,com.ibm.icu.math.MathContext.SCIENTIFIC,ROUND_HALF_UP);
  //-- }
@@ -2891,7 +2891,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   * @see    #toCharArray
   * @stable ICU 2.0
   */
- 
+
  //--public java.lang.String format(int before,int after,int explaces,int exdigits,int exformint,int exround){
  function format() {
   var explaces;
@@ -2944,16 +2944,16 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   var i=0;
   //--int places=0;
   var places=0;
-  
-  
+
+
   /* Check arguments */
-  if ((before<(-1))||(before==0)) 
+  if ((before<(-1))||(before==0))
    this.badarg("format",1,before);
-  if (after<(-1)) 
+  if (after<(-1))
    this.badarg("format",2,after);
-  if ((explaces<(-1))||(explaces==0)) 
+  if ((explaces<(-1))||(explaces==0))
    this.badarg("format",3,explaces);
-  if (exdigits<(-1)) 
+  if (exdigits<(-1))
    this.badarg("format",4,exdigits);
   {/*select*/
   if (exformint==MathContext.prototype.SCIENTIFIC)
@@ -2969,19 +2969,19 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   }
   // checking the rounding mode is done by trying to construct a
   // MathContext object with that mode; it will fail if bad
-  if (exround!=this.ROUND_HALF_UP) 
+  if (exround!=this.ROUND_HALF_UP)
    {try{ // if non-default...
-    if (exround==(-1)) 
+    if (exround==(-1))
      exround=this.ROUND_HALF_UP;
-    else 
+    else
      new MathContext(9,MathContext.prototype.SCIENTIFIC,false,exround);
    }
    catch ($10){
     this.badarg("format",6,exround);
    }}
-  
+
   num=this.clone(this); // make private copy
-  
+
   /* Here:
      num       is BigDecimal to format
      before    is places before point [>0]
@@ -2992,7 +2992,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
      exround   is rounding mode       [one of eight]
      'before' through 'exdigits' are -1 if not specified
   */
-  
+
   /* determine form */
   {setform:do{/*select*/
   if (exdigits==(-1))
@@ -3002,21 +3002,21 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   else{
    // determine whether triggers
    mag=num.exp+num.mant.length;
-   if (mag>exdigits) 
+   if (mag>exdigits)
     num.form=exformint;
-   else 
-    if (mag<(-5)) 
+   else
+    if (mag<(-5))
      num.form=exformint;
-    else 
+    else
      num.form=MathContext.prototype.PLAIN;
   }
   }while(false);}/*setform*/
-  
+
   /* If 'after' was specified then we may need to adjust the
      mantissa.  This is a little tricky, as we must conform to the
      rules of exponential layout if necessary (e.g., we cannot end up
      with 10.0 if scientific). */
-  if (after>=0) 
+  if (after>=0)
    {setafter:for(;;){
     // calculate the current after-length
     {/*select*/
@@ -3026,24 +3026,24 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
      thisafter=num.mant.length-1;
     else{ // engineering
      lead=(((num.exp+num.mant.length)-1))%3; // exponent to use
-     if (lead<0) 
+     if (lead<0)
       lead=3+lead; // negative exponent case
      lead++; // number of leading digits
-     if (lead>=num.mant.length) 
+     if (lead>=num.mant.length)
       thisafter=0;
-     else 
+     else
       thisafter=num.mant.length-lead;
     }
     }
-    if (thisafter==after) 
+    if (thisafter==after)
      break setafter; // we're in luck
-    if (thisafter<after) 
+    if (thisafter<after)
      { // need added trailing zeros
       // [thisafter can be negative]
       newmant=this.extend(num.mant,(num.mant.length+after)-thisafter);
       num.mant=newmant;
       num.exp=num.exp-((after-thisafter)); // adjust exponent
-      if (num.exp<this.MinExp) 
+      if (num.exp<this.MinExp)
        throw "format(): Exponent Overflow: " + num.exp;
       break setafter;
      }
@@ -3051,7 +3051,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
     // cause a carry, which could change the mantissa...
     // Watch out for implied leading zeros in PLAIN case
     chop=thisafter-after; // digits to lop [is >0]
-    if (chop>num.mant.length) 
+    if (chop>num.mant.length)
      { // all digits go, no chance of carry
       // carry on with zero
       num.mant=this.ZERO.mant;
@@ -3066,31 +3066,31 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
     num.round(need,exround);
     // if the exponent grew by more than the digits we chopped, then
     // we must have had a carry, so will need to recheck the layout
-    if ((num.exp-oldexp)==chop) 
+    if ((num.exp-oldexp)==chop)
      break setafter; // number did not have carry
     // mantissa got extended .. so go around and check again
     }
    }/*setafter*/
-  
+
   a=num.layout(); // lay out, with exponent if required, etc.
-  
+
   /* Here we have laid-out number in 'a' */
   // now apply 'before' and 'explaces' as needed
-  if (before>0) 
+  if (before>0)
    {
     // look for '.' or 'E'
     {var $11=a.length;p=0;p:for(;$11>0;$11--,p++){
-     if (a[p]=='.') 
+     if (a[p]=='.')
       break p;
-     if (a[p]=='E') 
+     if (a[p]=='E')
       break p;
      }
     }/*p*/
     // p is now offset of '.', 'E', or character after end of array
     // that is, the current length of before part
-    if (p>before) 
+    if (p>before)
      this.badarg("format",1,before); // won't fit
-    if (p<before) 
+    if (p<before)
      { // need leading blanks
       newa=new Array((a.length+before)-p);
       {var $12=before-p;i=0;i:for(;$12>0;$12--,i++){
@@ -3103,17 +3103,17 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
      }
    // [if p=before then it's just the right length]
    }
-  
-  if (explaces>0) 
+
+  if (explaces>0)
    {
     // look for 'E' [cannot be at offset 0]
     {var $13=a.length-1;p=a.length-1;p:for(;$13>0;$13--,p--){
-     if (a[p]=='E') 
+     if (a[p]=='E')
       break p;
      }
     }/*p*/
     // p is now offset of 'E', or 0
-    if (p==0) 
+    if (p==0)
      { // no E part; add trailing blanks
       newa=new Array((a.length+explaces)+2);
       //--java.lang.System.arraycopy((java.lang.Object)a,0,(java.lang.Object)newa,0,a.length);
@@ -3124,12 +3124,12 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
       }/*i*/
       a=newa;
      }
-    else 
+    else
      {/* found E */ // may need to insert zeros
       places=(a.length-p)-2; // number so far
-      if (places>explaces) 
+      if (places>explaces)
        this.badarg("format",3,explaces);
-      if (places<explaces) 
+      if (places<explaces)
        { // need to insert zeros
         newa=new Array((a.length+explaces)-places);
         //--java.lang.System.arraycopy((java.lang.Object)a,0,(java.lang.Object)newa,0,p+2); // through E and sign
@@ -3162,7 +3162,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   * @return An <code>int</code> that is the hashcode for <code>this</code>.
   * @stable ICU 2.0
   */
- 
+
  //--public int hashCode(){
  //-- // Maybe calculate ourselves, later.  If so, note that there can be
  //-- // more than one internal representation for a given toString() result.
@@ -3182,7 +3182,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   *         truncated and decapitated if necessary.
   * @stable ICU 2.0
   */
- 
+
  //--public int intValue(){
  //-- return toBigInteger().intValue();
  //-- }
@@ -3199,7 +3199,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   *                 <code>int</code>.
   * @stable ICU 2.0
   */
- 
+
  //--public int intValueExact(){
  function intValueExact() {
   //--int lodigit;
@@ -3215,21 +3215,21 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   // This does not use longValueExact() as the latter can be much
   // slower.
   // intcheck (from pow) relies on this to check decimal part
-  if (this.ind==this.iszero) 
+  if (this.ind==this.iszero)
    return 0; // easy, and quite common
   /* test and drop any trailing decimal part */
   lodigit=this.mant.length-1;
-  if (this.exp<0) 
+  if (this.exp<0)
    {
     lodigit=lodigit+this.exp; // reduces by -(-exp)
     /* all decimal places must be 0 */
-    if ((!(this.allzero(this.mant,lodigit+1)))) 
+    if ((!(this.allzero(this.mant,lodigit+1))))
      throw "intValueExact(): Decimal part non-zero: " + this.toString();
-    if (lodigit<0) 
+    if (lodigit<0)
      return 0; // -1<this<1
     useexp=0;
    }
-  else 
+  else
    {/* >=0 */
     if ((this.exp+lodigit)>9)  // early exit
      throw "intValueExact(): Conversion overflow: "+this.toString();
@@ -3239,30 +3239,30 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   result=0;
   {var $16=lodigit+useexp;i=0;i:for(;i<=$16;i++){
    result=result*10;
-   if (i<=lodigit) 
+   if (i<=lodigit)
     result=result+this.mant[i];
    }
   }/*i*/
-  
+
   /* Now, if the risky length, check for overflow */
-  if ((lodigit+useexp)==9) 
+  if ((lodigit+useexp)==9)
    {
     // note we cannot just test for -ve result, as overflow can move a
     // zero into the top bit [consider 5555555555]
     topdig=div(result,1000000000); // get top digit, preserving sign
-    if (topdig!=this.mant[0]) 
+    if (topdig!=this.mant[0])
      { // digit must match and be positive
       // except in the special case ...
       if (result==-2147483648)  // looks like the special
        if (this.ind==this.isneg)  // really was negative
-        if (this.mant[0]==2) 
+        if (this.mant[0]==2)
          return result; // really had top digit 2
       throw "intValueExact(): Conversion overflow: "+this.toString();
      }
    }
-  
+
   /* Looks good */
-  if (this.ind==this.ispos) 
+  if (this.ind==this.ispos)
    return result;
   return -result;
   }
@@ -3280,7 +3280,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   *         truncated and decapitated if necessary.
   * @stable ICU 2.0
   */
- 
+
  //--public long longValue(){
  //-- return toBigInteger().longValue();
  //-- }
@@ -3297,7 +3297,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   *                 <code>long</code>.
   * @stable ICU 2.0
   */
- 
+
  //--public long longValueExact(){
  //-- int lodigit;
  //-- int cstart=0;
@@ -3306,30 +3306,30 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
  //-- int i=0;
  //-- long topdig=0;
  //-- // Identical to intValueExact except for result=long, and exp>=20 test
- //-- if (ind==0) 
+ //-- if (ind==0)
  //--  return 0; // easy, and quite common
  //-- lodigit=mant.length-1; // last included digit
- //-- if (exp<0) 
+ //-- if (exp<0)
  //--  {
  //--   lodigit=lodigit+exp; // -(-exp)
  //--   /* all decimal places must be 0 */
- //--   if (lodigit<0) 
+ //--   if (lodigit<0)
  //--    cstart=0;
- //--   else 
+ //--   else
  //--    cstart=lodigit+1;
- //--   if ((!(allzero(mant,cstart)))) 
+ //--   if ((!(allzero(mant,cstart))))
  //--    throw new java.lang.ArithmeticException("Decimal part non-zero:"+" "+this.toString());
- //--   if (lodigit<0) 
+ //--   if (lodigit<0)
  //--    return 0; // -1<this<1
  //--   useexp=0;
  //--  }
- //-- else 
+ //-- else
  //--  {/* >=0 */
  //--   if ((exp+mant.length)>18)  // early exit
  //--    throw new java.lang.ArithmeticException("Conversion overflow:"+" "+this.toString());
  //--   useexp=exp;
  //--  }
- //-- 
+ //--
  //-- /* convert the mantissa to binary, inline for speed */
  //-- // note that we could safely use the 'test for wrap to negative'
  //-- // algorithm here, but instead we parallel the intValueExact
@@ -3337,28 +3337,28 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
  //-- result=(long)0;
  //-- {int $17=lodigit+useexp;i=0;i:for(;i<=$17;i++){
  //--  result=result*10;
- //--  if (i<=lodigit) 
+ //--  if (i<=lodigit)
  //--   result=result+mant[i];
  //--  }
  //-- }/*i*/
- //-- 
+ //--
  //-- /* Now, if the risky length, check for overflow */
- //-- if ((lodigit+useexp)==18) 
+ //-- if ((lodigit+useexp)==18)
  //--  {
  //--   topdig=result/1000000000000000000L; // get top digit, preserving sign
- //--   if (topdig!=mant[0]) 
+ //--   if (topdig!=mant[0])
  //--    { // digit must match and be positive
  //--     // except in the special case ...
  //--     if (result==java.lang.Long.MIN_VALUE)  // looks like the special
  //--      if (ind==isneg)  // really was negative
- //--       if (mant[0]==9) 
+ //--       if (mant[0]==9)
  //--        return result; // really had top digit 9
  //--     throw new java.lang.ArithmeticException("Conversion overflow:"+" "+this.toString());
  //--    }
  //--  }
- //-- 
+ //--
  //-- /* Looks good */
- //-- if (ind==ispos) 
+ //-- if (ind==ispos)
  //--  return result;
  //-- return (long)-result;
  //-- }
@@ -3384,7 +3384,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   *           <code>n</code> places to the left.
   * @stable ICU 2.0
   */
- 
+
  //--public com.ibm.icu.math.BigDecimal movePointLeft(int n){
  function movePointLeft(n) {
   //--com.ibm.icu.math.BigDecimal res;
@@ -3416,7 +3416,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   *           <code>n</code> places to the right.
   * @stable ICU 2.0
   */
- 
+
  //--public com.ibm.icu.math.BigDecimal movePointRight(int n){
  function movePointRight(n) {
   //--com.ibm.icu.math.BigDecimal res;
@@ -3437,10 +3437,10 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   *         <code>BigDecimal</code>.
   * @stable ICU 2.0
   */
- 
+
  //--public int scale(){
  function scale() {
-  if (this.exp>=0) 
+  if (this.exp>=0)
    return 0; // scale can never be negative
   return -this.exp;
   }
@@ -3471,7 +3471,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   *               non-zero digits.
   * @stable ICU 2.0
   */
- 
+
  //--public com.ibm.icu.math.BigDecimal setScale(int scale){
  //-- return setScale(scale,ROUND_UNNECESSARY);
  //-- }
@@ -3509,7 +3509,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   *               reducing scale would discard non-zero digits.
   * @stable ICU 2.0
   */
- 
+
  //--public com.ibm.icu.math.BigDecimal setScale(int scale,int round){
  function setScale() {
   var round;
@@ -3541,19 +3541,19 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
    if (this.form==MathContext.prototype.PLAIN)  // .. and form
     return this;
   res=this.clone(this); // need copy
-  if (ourscale<=scale) 
+  if (ourscale<=scale)
    { // simply zero-padding/changing form
     // if ourscale is 0 we may have lots of 0s to add
-    if (ourscale==0) 
+    if (ourscale==0)
      padding=res.exp+scale;
-    else 
+    else
      padding=scale-ourscale;
     res.mant=this.extend(res.mant,res.mant.length+padding);
     res.exp=-scale; // as requested
    }
-  else 
+  else
    {/* ourscale>scale: shortening, probably */
-    if (scale<0) 
+    if (scale<0)
      //--throw new java.lang.ArithmeticException("Negative scale:"+" "+scale);
      throw "setScale(): Negative scale: " + scale;
     // [round() will raise exception if invalid round]
@@ -3561,7 +3561,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
     res=res.round(newlen,round); // round to required length
     // This could have shifted left if round (say) 0.9->1[.0]
     // Repair if so by adding a zero and reducing exponent
-    if (res.exp!=(-scale)) 
+    if (res.exp!=(-scale))
      {
       res.mant=this.extend(res.mant,res.mant.length+1);
       res.exp=res.exp-1;
@@ -3570,7 +3570,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   res.form=MathContext.prototype.PLAIN; // by definition
   return res;
   }
- 
+
  /**
   * Converts this <code>BigDecimal</code> to a <code>short</code>.
   * If the <code>BigDecimal</code> has a non-zero decimal part or is
@@ -3583,11 +3583,11 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   *                 <code>short</code>.
   * @stable ICU 2.0
   */
- 
+
  //--public short shortValueExact(){
  //-- int num;
  //-- num=this.intValueExact(); // will check decimal part too
- //-- if ((num>32767)|(num<(-32768))) 
+ //-- if ((num>32767)|(num<(-32768)))
  //--  throw new java.lang.ArithmeticException("Conversion overflow:"+" "+this.toString());
  //-- return (short)num;
  //-- }
@@ -3605,12 +3605,12 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   *         numerically equal to zero, or 1 if it is positive.
   * @stable ICU 2.0
   */
- 
+
  //--public int signum(){
  function signum() {
   return this.ind; // [note this assumes values for ind.]
   }
- 
+
  /**
   * Converts this <code>BigDecimal</code> to a
   * <code>java.math.BigDecimal</code>.
@@ -3629,7 +3629,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   *         to this <code>BigDecimal</code>.
   * @stable ICU 2.0
   */
- 
+
  //--public java.math.BigDecimal toBigDecimal(){
  //-- return new java.math.BigDecimal(this.unscaledValue(),this.scale());
  //-- }
@@ -3646,7 +3646,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   *         to the integer part of this <code>BigDecimal</code>.
   * @stable ICU 2.0
   */
- 
+
  //--public java.math.BigInteger toBigInteger(){
  //-- com.ibm.icu.math.BigDecimal res=null;
  //-- int newlen=0;
@@ -3662,9 +3662,9 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
  //-- else{
  //--  { // exp<0; scale to be truncated
  //--   // we could use divideInteger, but we may as well be quicker
- //--   if (((int)-this.exp)>=this.mant.length) 
+ //--   if (((int)-this.exp)>=this.mant.length)
  //--    res=ZERO; // all blows away
- //--   else 
+ //--   else
  //--    {
  //--     res=clone(this); // safe copy
  //--     newlen=res.mant.length+res.exp;
@@ -3692,13 +3692,13 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   *         decimal part.
   * @stable ICU 2.0
   */
- 
+
  //--public java.math.BigInteger toBigIntegerExact(){
  //-- /* test any trailing decimal part */
- //-- if (exp<0) 
+ //-- if (exp<0)
  //--  { // possible decimal part
  //--   /* all decimal places must be 0; note exp<0 */
- //--   if ((!(allzero(mant,mant.length+exp)))) 
+ //--   if ((!(allzero(mant,mant.length+exp))))
  //--    throw new java.lang.ArithmeticException("Decimal part non-zero:"+" "+this.toString());
  //--  }
  //-- return toBigInteger();
@@ -3715,7 +3715,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   *         <code>BigDecimal</code>.
   * @stable ICU 2.0
   */
- 
+
  //--public char[] toCharArray(){
  //-- return layout();
  //-- }
@@ -3738,12 +3738,12 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   * @see    #toCharArray()
   * @stable ICU 2.0
   */
- 
+
  //--public java.lang.String toString(){
  function toString() {
   return this.layout().join("");
   }
- 
+
  /**
   * Returns the number as a <code>BigInteger</code> after removing the
   * scale.
@@ -3756,12 +3756,12 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   *         power of <code>this.scale()</code>.
   * @stable ICU 2.0
   */
- 
+
  //--public java.math.BigInteger unscaledValue(){
  //-- com.ibm.icu.math.BigDecimal res=null;
- //-- if (exp>=0) 
+ //-- if (exp>=0)
  //--  res=this;
- //-- else 
+ //-- else
  //--  {
  //--   res=clone(this); // safe copy
  //--   res.exp=0; // drop scale
@@ -3790,7 +3790,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   *             not a number.
   * @stable ICU 2.0
   */
- 
+
  //--public static com.ibm.icu.math.BigDecimal valueOf(double dub){
  //-- // Reminder: a zero double returns '0.0', so we cannot fastpath to
  //-- // use the constant ZERO.  This might be important enough to justify
@@ -3808,7 +3808,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   *              <code>lint</code>.
   * @stable ICU 2.0
   */
- 
+
  //--public static com.ibm.icu.math.BigDecimal valueOf(long lint){
  //-- return valueOf(lint,0);
  //-- }
@@ -3835,7 +3835,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   * @throws NumberFormatException if the scale is negative.
   * @stable ICU 2.0
   */
- 
+
  //--public static com.ibm.icu.math.BigDecimal valueOf(long lint,int scale){
  //-- com.ibm.icu.math.BigDecimal res=null;
  //-- {/*select*/
@@ -3849,9 +3849,9 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
  //--  res=new com.ibm.icu.math.BigDecimal(lint);
  //-- }
  //-- }
- //-- if (scale==0) 
+ //-- if (scale==0)
  //--  return res;
- //-- if (scale<0) 
+ //-- if (scale<0)
  //--  throw new java.lang.NumberFormatException("Negative scale:"+" "+scale);
  //-- res=clone(res); // safe copy [do not mutate]
  //-- res.exp=(int)-scale; // exponent is -scale
@@ -3861,7 +3861,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
  /* ---------------------------------------------------------------- */
  /* Private methods                                                  */
  /* ---------------------------------------------------------------- */
- 
+
  /* <sgml> Return char array value of a BigDecimal (conversion from
        BigDecimal to laid-out canonical char array).
     <p>The mantissa will either already have been rounded (following an
@@ -3871,7 +3871,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
     <p>'form' describes whether we are to use exponential notation (and
        if so, which), or if we are to lay out as a plain/pure numeric.
     </sgml> */
- 
+
  //--private char[] layout(){
  function layout() {
   //--char cmant[];
@@ -3899,16 +3899,16 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
    cmant[i]=this.mant[i]+'';
    }
   }/*i*/
-  
-  if (this.form!=MathContext.prototype.PLAIN) 
+
+  if (this.form!=MathContext.prototype.PLAIN)
    {/* exponential notation needed */
     //--sb=new java.lang.StringBuffer(cmant.length+15); // -x.xxxE+999999999
     sb="";
-    if (this.ind==this.isneg) 
+    if (this.ind==this.isneg)
      sb += '-';
     euse=(this.exp+cmant.length)-1; // exponent to use
     /* setup sig=significant digits and copy to result */
-    if (this.form==MathContext.prototype.SCIENTIFIC) 
+    if (this.form==MathContext.prototype.SCIENTIFIC)
      { // [default]
       sb += cmant[0]; // significant character
       if (cmant.length>1)  // have decimal part
@@ -3916,14 +3916,14 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
        sb += '.';
        sb += cmant.slice(1).join("");
      }
-    else 
+    else
      {engineering:do{
       sig=euse%3; // common
-      if (sig<0) 
+      if (sig<0)
        sig=3+sig; // negative exponent
       euse=euse-sig;
       sig++;
-      if (sig>=cmant.length) 
+      if (sig>=cmant.length)
        { // zero padding may be needed
         //--sb.append(cmant,0,cmant.length);
         sb += cmant.join("");
@@ -3932,7 +3932,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
          }
         }
        }
-      else 
+      else
        { // decimal point needed
         //--sb.append(cmant,0,sig).append('.').append(cmant,sig,cmant.length-sig);
         sb += cmant.slice(0,sig).join("");
@@ -3940,14 +3940,14 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
         sb += cmant.slice(sig).join("");
        }
      }while(false);}/*engineering*/
-    if (euse!=0) 
+    if (euse!=0)
      {
-      if (euse<0) 
+      if (euse<0)
        {
         csign='-';
         euse=-euse;
        }
-      else 
+      else
        csign='+';
       //--sb.append('E').append(csign).append(euse);
       sb += 'E';
@@ -3959,11 +3959,11 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
     //--return rec;
     return sb.split("");
    }
-  
+
   /* Here for non-exponential (plain) notation */
-  if (this.exp==0) 
+  if (this.exp==0)
    {/* easy */
-    if (this.ind>=0) 
+    if (this.ind>=0)
      return cmant; // non-negative integer
     rec=new Array(cmant.length+1);
     rec[0]='-';
@@ -3971,19 +3971,19 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
     this.arraycopy(cmant,0,rec,1,cmant.length);
     return rec;
    }
-  
+
   /* Need a '.' and/or some zeros */
   needsign=((this.ind==this.isneg)?1:0); // space for sign?  0 or 1
-  
+
   /* MAG is the position of the point in the mantissa (index of the
      character it follows) */
   mag=this.exp+cmant.length;
-  
-  if (mag<1) 
+
+  if (mag<1)
    {/* 0.00xxxx form */
     len=(needsign+2)-this.exp; // needsign+2+(-mag)+cmant.length
     rec=new Array(len);
-    if (needsign!=0) 
+    if (needsign!=0)
      rec[0]='-';
     rec[needsign]='0';
     rec[needsign+1]='.';
@@ -3995,12 +3995,12 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
     this.arraycopy(cmant,0,rec,(needsign+2)-mag,cmant.length);
     return rec;
    }
-  
-  if (mag>cmant.length) 
+
+  if (mag>cmant.length)
    {/* xxxx0000 form */
     len=needsign+mag;
     rec=new Array(len);
-    if (needsign!=0) 
+    if (needsign!=0)
      rec[0]='-';
     //--java.lang.System.arraycopy((java.lang.Object)cmant,0,(java.lang.Object)rec,needsign,cmant.length);
     this.arraycopy(cmant,0,rec,needsign,cmant.length);
@@ -4010,11 +4010,11 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
     }/*i*/
     return rec;
    }
-  
+
   /* decimal point is in the middle of the mantissa */
   len=(needsign+1)+cmant.length;
   rec=new Array(len);
-  if (needsign!=0) 
+  if (needsign!=0)
    rec[0]='-';
   //--java.lang.System.arraycopy((java.lang.Object)cmant,0,(java.lang.Object)rec,needsign,mag);
   this.arraycopy(cmant,0,rec,needsign,mag);
@@ -4023,33 +4023,33 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   this.arraycopy(cmant,mag,rec,(needsign+mag)+1,cmant.length-mag);
   return rec;
   }
- 
+
  /* <sgml> Checks a BigDecimal argument to ensure it's a true integer
        in a given range.
     <p>If OK, returns it as an int. </sgml> */
  // [currently only used by pow]
- 
+
  //--private int intcheck(int min,int max){
  function intcheck(min, max) {
   //--int i;
   var i;
   i=this.intValueExact(); // [checks for non-0 decimal part]
   // Use same message as though intValueExact failed due to size
-  if ((i<min)||(i>max)) 
+  if ((i<min)||(i>max))
    throw "intcheck(): Conversion overflow: "+i;
   return i;
   }
- 
+
  /* <sgml> Carry out division operations. </sgml> */
  /*
     Arg1 is operation code: D=divide, I=integer divide, R=remainder
     Arg2 is the rhs.
     Arg3 is the context.
     Arg4 is explicit scale iff code='D' or 'I' (-1 if none).
- 
+
     Underlying algorithm (complications for Remainder function and
     scaled division are omitted for clarity):
- 
+
       Test for x/0 and then 0/x
       Exp =Exp1 - Exp2
       Exp =Exp +len(var1) -len(var2)
@@ -4085,10 +4085,10 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
       if have=0 then generate answer=0
       Return to FINISHED
       Result defined by MATHV1
- 
+
     For extended commentary, see DMSRCN.
   */
- 
+
  //--private com.ibm.icu.math.BigDecimal dodivide(char code,com.ibm.icu.math.BigDecimal rhs,com.ibm.icu.math.MathContext set,int scale){
  function dodivide(code, rhs, set, scale) {
   //--com.ibm.icu.math.BigDecimal lhs;
@@ -4137,100 +4137,100 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   var actdig=0;
   //--byte newmant[]=null;
   var newmant=null;
-  
-  if (set.lostDigits) 
+
+  if (set.lostDigits)
    this.checkdigits(rhs,set.digits);
   lhs=this; // name for clarity
-  
+
   // [note we must have checked lostDigits before the following checks]
-  if (rhs.ind==0) 
+  if (rhs.ind==0)
    throw "dodivide(): Divide by 0"; // includes 0/0
-  if (lhs.ind==0) 
+  if (lhs.ind==0)
    { // 0/x => 0 [possibly with .0s]
-    if (set.form!=MathContext.prototype.PLAIN) 
+    if (set.form!=MathContext.prototype.PLAIN)
      return this.ZERO;
-    if (scale==(-1)) 
+    if (scale==(-1))
      return lhs;
     return lhs.setScale(scale);
    }
-  
+
   /* Prepare numbers according to BigDecimal rules */
   reqdig=set.digits; // local copy (heavily used)
-  if (reqdig>0) 
+  if (reqdig>0)
    {
-    if (lhs.mant.length>reqdig) 
+    if (lhs.mant.length>reqdig)
      lhs=this.clone(lhs).round(set);
-    if (rhs.mant.length>reqdig) 
+    if (rhs.mant.length>reqdig)
      rhs=this.clone(rhs).round(set);
    }
-  else 
+  else
    {/* scaled divide */
-    if (scale==(-1)) 
+    if (scale==(-1))
      scale=lhs.scale();
     // set reqdig to be at least large enough for the computation
     reqdig=lhs.mant.length; // base length
     // next line handles both positive lhs.exp and also scale mismatch
-    if (scale!=(-lhs.exp)) 
+    if (scale!=(-lhs.exp))
      reqdig=(reqdig+scale)+lhs.exp;
     reqdig=(reqdig-((rhs.mant.length-1)))-rhs.exp; // reduce by RHS effect
-    if (reqdig<lhs.mant.length) 
+    if (reqdig<lhs.mant.length)
      reqdig=lhs.mant.length; // clamp
-    if (reqdig<rhs.mant.length) 
+    if (reqdig<rhs.mant.length)
      reqdig=rhs.mant.length; // ..
    }
-  
+
   /* precalculate exponent */
   newexp=((lhs.exp-rhs.exp)+lhs.mant.length)-rhs.mant.length;
   /* If new exponent -ve, then some quick exits are possible */
-  if (newexp<0) 
-   if (code!='D') 
+  if (newexp<0)
+   if (code!='D')
     {
-     if (code=='I') 
+     if (code=='I')
       return this.ZERO; // easy - no integer part
      /* Must be 'R'; remainder is [finished clone of] input value */
      return this.clone(lhs).finish(set,false);
     }
-  
+
   /* We need slow division */
   res=new BigDecimal(); // where we'll build result
   res.ind=(lhs.ind*rhs.ind); // final sign (for D/I)
   res.exp=newexp; // initial exponent (for D/I)
   res.mant=this.createArrayWithZeros(reqdig+1); // where build the result
-  
+
   /* Now [virtually pad the mantissae with trailing zeros */
   // Also copy the LHS, which will be our working array
   newlen=(reqdig+reqdig)+1;
   var1=this.extend(lhs.mant,newlen); // always makes longer, so new safe array
   var1len=newlen; // [remaining digits are 0]
-  
+
   var2=rhs.mant;
   var2len=newlen;
-  
+
   /* Calculate first two digits of rhs (var2), +1 for later estimations */
   b2b=(var2[0]*10)+1;
-  if (var2.length>1) 
+  if (var2.length>1)
    b2b=b2b+var2[1];
-  
+
   /* start the long-division loops */
   have=0;
   {outer:for(;;){
    thisdigit=0;
    /* find the next digit */
    {inner:for(;;){
-    if (var1len<var2len) 
+    if (var1len<var2len)
      break inner; // V1 too low
-    if (var1len==var2len) 
+    if (var1len==var2len)
      { // compare needed
       {compare:do{ // comparison
        {var $22=var1len;i=0;i:for(;$22>0;$22--,i++){
         // var1len is always <= var1.length
-        if (i<var2.length) 
+        if (i<var2.length)
          v2=var2[i];
-        else 
+        else
          v2=0;
-        if (var1[i]<v2) 
+        if (var1[i]<v2)
          break inner; // V1 too low
-        if (var1[i]>v2) 
+        if (var1[i]>v2)
          break compare; // OK to subtract
         }
        }/*i*/
@@ -4249,55 +4249,55 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
       /* prepare for subtraction.  Estimate BA (lengths the same) */
       ba=var1[0]; // use only first digit
      } // lengths the same
-    else 
+    else
      {/* lhs longer than rhs */
       /* use first two digits for estimate */
       ba=var1[0]*10;
-      if (var1len>1) 
+      if (var1len>1)
        ba=ba+var1[1];
      }
     /* subtraction needed; V1>=V2 */
     mult=div((ba*10),b2b);
-    if (mult==0) 
+    if (mult==0)
      mult=1;
     thisdigit=thisdigit+mult;
     // subtract; var1 reusable
     var1=this.byteaddsub(var1,var1len,var2,var2len,-mult,true);
-    if (var1[0]!=0) 
+    if (var1[0]!=0)
      continue inner; // maybe another subtract needed
     /* V1 now probably has leading zeros, remove leading 0's and try
        again. (It could be longer than V2) */
     {var $23=var1len-2;start=0;start:for(;start<=$23;start++){
-     if (var1[start]!=0) 
+     if (var1[start]!=0)
       break start;
      var1len--;
      }
     }/*start*/
-    if (start==0) 
+    if (start==0)
      continue inner;
     // shift left
     //--java.lang.System.arraycopy((java.lang.Object)var1,start,(java.lang.Object)var1,0,var1len);
     this.arraycopy(var1,start,var1,0,var1len);
     }
    }/*inner*/
-   
+
    /* We have the next digit */
-   if ((have!=0)||(thisdigit!=0)) 
+   if ((have!=0)||(thisdigit!=0))
     { // put the digit we got
      res.mant[have]=thisdigit;
      have++;
-     if (have==(reqdig+1)) 
+     if (have==(reqdig+1))
       break outer; // we have all we need
-     if (var1[0]==0) 
+     if (var1[0]==0)
       break outer; // residue now 0
     }
    /* can leave now if a scaled divide and exponent is small enough */
-   if (scale>=0) 
-    if ((-res.exp)>scale) 
+   if (scale>=0)
+    if ((-res.exp)>scale)
      break outer;
    /* can leave now if not Divide and no integer part left  */
-   if (code!='D') 
-    if (res.exp<=0) 
+   if (code!='D')
+    if (res.exp<=0)
      break outer;
    res.exp=res.exp-1; // reduce the exponent
    /* to get here, V1 is less than V2, so divide V2 by 10 and go for
@@ -4305,41 +4305,41 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
    var2len--;
    }
   }/*outer*/
-  
+
   /* here when we have finished dividing, for some reason */
   // have is the number of digits we collected in res.mant
-  if (have==0) 
+  if (have==0)
    have=1; // res.mant[0] is 0; we always want a digit
-  
-  if ((code=='I')||(code=='R')) 
+
+  if ((code=='I')||(code=='R'))
    {/* check for integer overflow needed */
-    if ((have+res.exp)>reqdig) 
+    if ((have+res.exp)>reqdig)
      throw "dodivide(): Integer overflow";
-    
-    if (code=='R') 
+
+    if (code=='R')
      {remainder:do{
       /* We were doing Remainder -- return the residue */
       if (res.mant[0]==0)  // no integer part was found
        return this.clone(lhs).finish(set,false); // .. so return lhs, canonical
-      if (var1[0]==0) 
+      if (var1[0]==0)
        return this.ZERO; // simple 0 residue
       res.ind=lhs.ind; // sign is always as LHS
       /* Calculate the exponent by subtracting the number of padding zeros
          we added and adding the original exponent */
       padding=((reqdig+reqdig)+1)-lhs.mant.length;
       res.exp=(res.exp-padding)+lhs.exp;
-      
+
       /* strip insignificant padding zeros from residue, and create/copy
          the resulting mantissa if need be */
       d=var1len;
       {i=d-1;i:for(;i>=1;i--){if(!((res.exp<lhs.exp)&&(res.exp<rhs.exp)))break;
-       if (var1[i]!=0) 
+       if (var1[i]!=0)
         break i;
        d--;
        res.exp=res.exp+1;
        }
       }/*i*/
-      if (d<var1.length) 
+      if (d<var1.length)
        {/* need to reduce */
         newvar1=new Array(d);
         //--java.lang.System.arraycopy((java.lang.Object)var1,0,(java.lang.Object)newvar1,0,d); // shorten
@@ -4350,27 +4350,27 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
       return res.finish(set,false);
      }while(false);}/*remainder*/
    }
-   
-  else 
+
+  else
    {/* 'D' -- no overflow check needed */
     // If there was a residue then bump the final digit (iff 0 or 5)
     // so that the residue is visible for ROUND_UP, ROUND_HALF_xxx and
     // ROUND_UNNECESSARY checks (etc.) later.
     // [if we finished early, the residue will be 0]
-    if (var1[0]!=0) 
+    if (var1[0]!=0)
      { // residue not 0
       lasthave=res.mant[have-1];
-      if (((lasthave%5))==0) 
+      if (((lasthave%5))==0)
        res.mant[have-1]=(lasthave+1);
      }
    }
-  
+
   /* Here for Divide or Integer Divide */
   // handle scaled results first ['I' always scale 0, optional for 'D']
-  if (scale>=0) 
+  if (scale>=0)
    {scaled:do{
     // say 'scale have res.exp len' scale have res.exp res.mant.length
-    if (have!=res.mant.length) 
+    if (have!=res.mant.length)
      // already padded with 0's, so just adjust exponent
      res.exp=res.exp-((res.mant.length-have));
     // calculate number of digits we really want [may be 0]
@@ -4378,23 +4378,23 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
     res.round(actdig,set.roundingMode); // round to desired length
     // This could have shifted left if round (say) 0.9->1[.0]
     // Repair if so by adding a zero and reducing exponent
-    if (res.exp!=(-scale)) 
+    if (res.exp!=(-scale))
      {
       res.mant=this.extend(res.mant,res.mant.length+1);
       res.exp=res.exp-1;
      }
     return res.finish(set,true); // [strip if not PLAIN]
    }while(false);}/*scaled*/
-  
+
   // reach here only if a non-scaled
-  if (have==res.mant.length) 
+  if (have==res.mant.length)
    { // got digits+1 digits
     res.round(set);
     have=reqdig;
    }
-  else 
+  else
    {/* have<=reqdig */
-    if (res.mant[0]==0) 
+    if (res.mant[0]==0)
      return this.ZERO; // fastpath
     // make the mantissa truly just 'have' long
     // [we could let finish do this, during strip, if we adjusted
@@ -4406,19 +4406,19 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
    }
   return res.finish(set,true);
   }
- 
+
  /* <sgml> Report a conversion exception. </sgml> */
- 
+
  //--private void bad(char s[]){
  function bad(prefix, s) {
   throw prefix + "Not a number: "+s;
   }
- 
+
  /* <sgml> Report a bad argument to a method. </sgml>
     Arg1 is method name
     Arg2 is argument position
     Arg3 is what was found */
- 
+
  //--private void badarg(java.lang.String name,int pos,java.lang.String value){
  function badarg(name, pos, value) {
   throw "Bad argument "+pos+" to "+name+": "+value;
@@ -4426,16 +4426,16 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
 
  /* <sgml> Extend byte array to given length, padding with 0s.  If no
     extension is required then return the same array. </sgml>
- 
+
     Arg1 is the source byte array
     Arg2 is the new length (longer)
     */
- 
+
  //--private static final byte[] extend(byte inarr[],int newlen){
  function extend(inarr, newlen) {
   //--byte newarr[];
   var newarr;
-  if (inarr.length==newlen) 
+  if (inarr.length==newlen)
    return inarr;
   newarr=createArrayWithZeros(newlen);
   //--java.lang.System.arraycopy((java.lang.Object)inarr,0,(java.lang.Object)newarr,0,inarr.length);
@@ -4443,7 +4443,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   // 0 padding is carried out by the JVM on allocation initialization
   return newarr;
   }
- 
+
  /* <sgml> Add or subtract two >=0 integers in byte arrays
     <p>This routine performs the calculation:
     <pre>
@@ -4453,21 +4453,21 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
     <p>
     If M<0 then A>=B must be true, so the result is always
     non-negative.
- 
+
     Leading zeros are not removed after a subtraction.  The result is
     either the same length as the longer of A and B, or 1 longer than
     that (if a carry occurred).
- 
+
     A is not altered unless Arg6 is 1.
     B is never altered.
- 
+
     Arg1 is A
     Arg2 is A length to use (if longer than A, pad with 0's)
     Arg3 is B
     Arg4 is B length to use (if longer than B, pad with 0's)
     Arg5 is M, the multiplier
     Arg6 is 1 if A can be used to build the result (if it fits)
- 
+
     This routine is severely performance-critical; *any* change here
     must be measured (timed) to assure no performance degradation.
     */
@@ -4478,7 +4478,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
  // 1998.12.29 -- use lookaside for digit/carry calculation
  // 1999.08.07 -- avoid multiply when mult=1, and make db an int
  // 1999.12.22 -- special case m=-1, also drop 0 special case
- 
+
  //--private static final byte[] byteaddsub(byte a[],int avlen,byte b[],int bvlen,int m,boolean reuse){
  function byteaddsub(a, avlen, b, bvlen, m, reuse) {
   //--int alength;
@@ -4505,60 +4505,60 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   var newarr;
   //--int i=0;
   var i=0;
-  
-  
-  
-  
+
+
+
+
   // We'll usually be right if we assume no carry
   alength=a.length; // physical lengths
   blength=b.length; // ..
   ap=avlen-1; // -> final (rightmost) digit
   bp=bvlen-1; // ..
   maxarr=bp;
-  if (maxarr<ap) 
+  if (maxarr<ap)
    maxarr=ap;
   reb=null; // result byte array
-  if (reuse) 
-   if ((maxarr+1)==alength) 
+  if (reuse)
+   if ((maxarr+1)==alength)
     reb=a; // OK to reuse A
-  if (reb==null){ 
+  if (reb==null){
    reb=this.createArrayWithZeros(maxarr+1); // need new array
    }
-  
+
   quickm=false; // 1 if no multiply needed
-  if (m==1) 
+  if (m==1)
    quickm=true; // most common
-  else 
-   if (m==(-1)) 
+  else
+   if (m==(-1))
     quickm=true; // also common
-  
+
   digit=0; // digit, with carry or borrow
   {op=maxarr;op:for(;op>=0;op--){
-   if (ap>=0) 
+   if (ap>=0)
     {
-     if (ap<alength) 
+     if (ap<alength)
       digit=digit+a[ap]; // within A
      ap--;
     }
-   if (bp>=0) 
+   if (bp>=0)
     {
-     if (bp<blength) 
+     if (bp<blength)
       { // within B
-       if (quickm) 
+       if (quickm)
         {
-         if (m>0) 
+         if (m>0)
           digit=digit+b[bp]; // most common
-         else 
+         else
           digit=digit-b[bp]; // also common
         }
-       else 
+       else
         digit=digit+(b[bp]*m);
       }
      bp--;
     }
    /* result so far (digit) could be -90 through 99 */
-   if (digit<10) 
-    if (digit>=0) 
+   if (digit<10)
+    if (digit>=0)
      {quick:do{ // 0-9
       reb[op]=digit;
       digit=0; // no carry
@@ -4569,34 +4569,34 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
    digit=this.bytecar[dp90]; // carry or borrow
    }
   }/*op*/
-  
-  if (digit==0) 
+
+  if (digit==0)
    return reb; // no carry
   // following line will become an Assert, later
   // if digit<0 then signal ArithmeticException("internal.error ["digit"]")
-  
+
   /* We have carry -- need to make space for the extra digit */
   newarr=null;
-  if (reuse) 
-   if ((maxarr+2)==a.length) 
+  if (reuse)
+   if ((maxarr+2)==a.length)
     newarr=a; // OK to reuse A
-  if (newarr==null) 
+  if (newarr==null)
    newarr=new Array(maxarr+2);
   newarr[0]=digit; // the carried digit ..
   // .. and all the rest [use local loop for short numbers]
-  //--if (maxarr<10) 
+  //--if (maxarr<10)
    {var $24=maxarr+1;i=0;i:for(;$24>0;$24--,i++){
     newarr[i+1]=reb[i];
     }
    }/*i*/
-  //--else 
+  //--else
    //--java.lang.System.arraycopy((java.lang.Object)reb,0,(java.lang.Object)newarr,1,maxarr+1);
   return newarr;
   }
 
  /* <sgml> Initializer for digit array properties (lookaside). </sgml>
     Returns the digit array, and initializes the carry array. */
- 
+
  //--private static final byte[] diginit(){
  function diginit() {
   //--byte work[];
@@ -4608,7 +4608,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   work=new Array((90+99)+1);
   {op=0;op:for(;op<=(90+99);op++){
    digit=op-90;
-   if (digit>=0) 
+   if (digit>=0)
     {
      work[op]=(digit%10);
      BigDecimal.prototype.bytecar[op]=(div(digit,10)); // calculate carry
@@ -4628,7 +4628,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
     </sgml>
     Arg1 is the BigDecimal to clone (non-null)
     */
- 
+
  //--private static final com.ibm.icu.math.BigDecimal clone(com.ibm.icu.math.BigDecimal dec){
  function clone(dec) {
   //--com.ibm.icu.math.BigDecimal copy;
@@ -4645,19 +4645,19 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
     Arg1 is RHS (or null, if none)
     Arg2 is current DIGITS setting
     returns quietly or throws an exception */
- 
+
  //--private void checkdigits(com.ibm.icu.math.BigDecimal rhs,int dig){
  function checkdigits(rhs, dig) {
-  if (dig==0) 
+  if (dig==0)
    return; // don't check if digits=0
   // first check lhs...
-  if (this.mant.length>dig) 
-   if ((!(this.allzero(this.mant,dig)))) 
+  if (this.mant.length>dig)
+   if ((!(this.allzero(this.mant,dig))))
     throw "Too many digits: "+this.toString();
-  if (rhs==null) 
+  if (rhs==null)
    return; // monadic
-  if (rhs.mant.length>dig) 
-   if ((!(this.allzero(rhs.mant,dig)))) 
+  if (rhs.mant.length>dig)
+   if ((!(this.allzero(rhs.mant,dig))))
     throw "Too many digits: "+rhs.toString();
   return;
   }
@@ -4665,7 +4665,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
  /* <sgml> Round to specified digits, if necessary. </sgml>
     Arg1 is requested MathContext [with length and rounding mode]
     returns this, for convenience */
- 
+
  //--private com.ibm.icu.math.BigDecimal round(com.ibm.icu.math.MathContext set){
  //-- return round(set.digits,set.roundingMode);
  //-- }
@@ -4675,14 +4675,14 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
             [may be <=0 when called from format, dodivide, etc.]
     Arg2 is rounding mode
     returns this, for convenience
- 
+
     ind and exp are adjusted, but not cleared for a mantissa of zero
- 
+
     The length of the mantissa returned will be Arg1, except when Arg1
     is 0, in which case the returned mantissa length will be 1.
     </sgml>
     */
- 
+
  //private com.ibm.icu.math.BigDecimal round(int len,int mode){
  function round() {
   var len;
@@ -4717,13 +4717,13 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   //--byte newmant[]=null;
   var newmant=null;
   adjust=this.mant.length-len;
-  if (adjust<=0) 
+  if (adjust<=0)
    return this; // nowt to do
-  
+
   this.exp=this.exp+adjust; // exponent of result
   sign=this.ind; // save [assumes -1, 0, 1]
   oldmant=this.mant; // save
-  if (len>0) 
+  if (len>0)
    {
     // remove the unwanted digits
     this.mant=new Array(len);
@@ -4732,51 +4732,51 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
     reuse=true; // can reuse mantissa
     first=oldmant[len]; // first of discarded digits
    }
-  else 
+  else
    {/* len<=0 */
     this.mant=this.ZERO.mant;
     this.ind=this.iszero;
     reuse=false; // cannot reuse mantissa
-    if (len==0) 
+    if (len==0)
      first=oldmant[0];
-    else 
+    else
      first=0; // [virtual digit]
    }
-  
+
   // decide rounding adjustment depending on mode, sign, and discarded digits
   increment=0; // bumper
   {modes:do{/*select*/
   if (mode==this.ROUND_HALF_UP)
    { // default first [most common]
-    if (first>=5) 
+    if (first>=5)
      increment=sign;
    }
   else if (mode==this.ROUND_UNNECESSARY)
    { // default for setScale()
     // discarding any non-zero digits is an error
-    if ((!(this.allzero(oldmant,len)))) 
+    if ((!(this.allzero(oldmant,len))))
      throw "round(): Rounding necessary";
    }
   else if (mode==this.ROUND_HALF_DOWN)
    { // 0.5000 goes down
-    if (first>5) 
+    if (first>5)
      increment=sign;
-    else 
-     if (first==5) 
-      if ((!(this.allzero(oldmant,len+1)))) 
+    else
+     if (first==5)
+      if ((!(this.allzero(oldmant,len+1))))
        increment=sign;
    }
   else if (mode==this.ROUND_HALF_EVEN)
    { // 0.5000 goes down if left digit even
-    if (first>5) 
+    if (first>5)
      increment=sign;
-    else 
-     if (first==5) 
+    else
+     if (first==5)
       {
-       if ((!(this.allzero(oldmant,len+1)))) 
+       if ((!(this.allzero(oldmant,len+1))))
         increment=sign;
        else /* 0.5000 */
-        if ((((this.mant[this.mant.length-1])%2))==1) 
+        if ((((this.mant[this.mant.length-1])%2))==1)
          increment=sign;
       }
    }
@@ -4784,41 +4784,41 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
    ; // never increment
   else if (mode==this.ROUND_UP)
    { // increment if discarded non-zero
-    if ((!(this.allzero(oldmant,len)))) 
+    if ((!(this.allzero(oldmant,len))))
      increment=sign;
    }
   else if (mode==this.ROUND_CEILING)
    { // more positive
-    if (sign>0) 
-     if ((!(this.allzero(oldmant,len)))) 
+    if (sign>0)
+     if ((!(this.allzero(oldmant,len))))
       increment=sign;
    }
   else if (mode==this.ROUND_FLOOR)
    { // more negative
-    if (sign<0) 
-     if ((!(this.allzero(oldmant,len)))) 
+    if (sign<0)
+     if ((!(this.allzero(oldmant,len))))
       increment=sign;
    }
   else{
    throw "round(): Bad round value: "+mode;
   }
   }while(false);}/*modes*/
-  
-  if (increment!=0) 
+
+  if (increment!=0)
    {bump:do{
-    if (this.ind==this.iszero) 
+    if (this.ind==this.iszero)
      {
       // we must not subtract from 0, but result is trivial anyway
       this.mant=this.ONE.mant;
       this.ind=increment;
      }
-    else 
+    else
      {
       // mantissa is non-0; we can safely add or subtract 1
-      if (this.ind==this.isneg) 
+      if (this.ind==this.isneg)
        increment=-increment;
       newmant=this.byteaddsub(this.mant,this.mant.length,this.ONE.mant,1,increment,reuse);
-      if (newmant.length>this.mant.length) 
+      if (newmant.length>this.mant.length)
        { // had a carry
         // drop rightmost digit and raise exponent
         this.exp++;
@@ -4826,12 +4826,12 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
         //java.lang.System.arraycopy((java.lang.Object)newmant,0,(java.lang.Object)mant,0,mant.length);
         this.arraycopy(newmant,0,this.mant,0,this.mant.length);
        }
-      else 
+      else
        this.mant=newmant;
      }
    }while(false);}/*bump*/
   // rounding can increase exponent significantly
-  if (this.exp>this.MaxExp) 
+  if (this.exp>this.MaxExp)
    throw "round(): Exponent Overflow: "+this.exp;
   return this;
   }
@@ -4841,24 +4841,24 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
     Arg2 is the offset of first digit to check
             [may be negative; if so, digits to left are 0's]
     returns 1 if all the digits starting at Arg2 are 0
- 
+
     Arg2 may be beyond array bounds, in which case 1 is returned
     </sgml> */
- 
+
  //--private static final boolean allzero(byte array[],int start){
  function allzero(array, start) {
   //--int i=0;
   var i=0;
-  if (start<0) 
+  if (start<0)
    start=0;
   {var $25=array.length-1;i=start;i:for(;i<=$25;i++){
-   if (array[i]!=0) 
+   if (array[i]!=0)
     return false;
    }
   }/*i*/
   return true;
   }
- 
+
  /* <sgml> Carry out final checks and canonicalization
     <p>
     This finishes off the current number by:
@@ -4875,7 +4875,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
          round (for division, etc.), provided that set.form isn't PLAIN.
    returns this, for convenience
    */
- 
+
  //--private com.ibm.icu.math.BigDecimal finish(com.ibm.icu.math.MathContext set,boolean strip){
  function finish(set, strip) {
   //--int d=0;
@@ -4889,25 +4889,25 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
   //--int sig=0;
   var sig=0;
   /* Round if mantissa too long and digits requested */
-  if (set.digits!=0) 
-   if (this.mant.length>set.digits) 
+  if (set.digits!=0)
+   if (this.mant.length>set.digits)
     this.round(set);
-  
+
   /* If strip requested (and standard formatting), remove
      insignificant trailing zeros. */
-  if (strip) 
-   if (set.form!=MathContext.prototype.PLAIN) 
+  if (strip)
+   if (set.form!=MathContext.prototype.PLAIN)
     {
      d=this.mant.length;
      /* see if we need to drop any trailing zeros */
      {i=d-1;i:for(;i>=1;i--){
-      if (this.mant[i]!=0) 
+      if (this.mant[i]!=0)
        break i;
       d--;
       this.exp++;
       }
      }/*i*/
-     if (d<this.mant.length) 
+     if (d<this.mant.length)
       {/* need to reduce */
        newmant=new Array(d);
        //--java.lang.System.arraycopy((java.lang.Object)this.mant,0,(java.lang.Object)newmant,0,d);
@@ -4915,16 +4915,16 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
        this.mant=newmant;
       }
     }
-  
+
   this.form=MathContext.prototype.PLAIN; // preset
-  
+
   /* Now check for leading- and all- zeros in mantissa */
   {var $26=this.mant.length;i=0;i:for(;$26>0;$26--,i++){
-   if (this.mant[i]!=0) 
+   if (this.mant[i]!=0)
     {
      // non-0 result; ind will be correct
      // remove leading zeros [e.g., after subtract]
-     if (i>0) 
+     if (i>0)
       {delead:do{
        newmant=new Array(this.mant.length-i);
        //--java.lang.System.arraycopy((java.lang.Object)this.mant,i,(java.lang.Object)newmant,0,this.mant.length-i);
@@ -4933,31 +4933,31 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
       }while(false);}/*delead*/
      // now determine form if not PLAIN
      mag=this.exp+this.mant.length;
-     if (mag>0) 
+     if (mag>0)
       { // most common path
-       if (mag>set.digits) 
-        if (set.digits!=0) 
+       if (mag>set.digits)
+        if (set.digits!=0)
          this.form=set.form;
-       if ((mag-1)<=this.MaxExp) 
+       if ((mag-1)<=this.MaxExp)
         return this; // no overflow; quick return
       }
-     else 
-      if (mag<(-5)) 
+     else
+      if (mag<(-5))
        this.form=set.form;
      /* check for overflow */
      mag--;
-     if ((mag<this.MinExp)||(mag>this.MaxExp)) 
+     if ((mag<this.MinExp)||(mag>this.MaxExp))
       {overflow:do{
        // possible reprieve if form is engineering
-       if (this.form==MathContext.prototype.ENGINEERING) 
+       if (this.form==MathContext.prototype.ENGINEERING)
         {
          sig=mag%3; // leftover
-         if (sig<0) 
+         if (sig<0)
           sig=3+sig; // negative exponent
          mag=mag-sig; // exponent to use
          // 1999.06.29: second test here must be MaxExp
-         if (mag>=this.MinExp) 
-          if (mag<=this.MaxExp) 
+         if (mag>=this.MinExp)
+          if (mag<=this.MaxExp)
            break overflow;
         }
        throw "finish(): Exponent Overflow: "+mag;
@@ -4966,7 +4966,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
     }
    }
   }/*i*/
-  
+
   // Drop through to here only if mantissa is all zeros
   this.ind=this.iszero;
   {/*select*/
@@ -4976,7 +4976,7 @@ BigDecimal.prototype.ONE = new BigDecimal("1");
    this.exp=0; // +ve exponent also goes to '0'
   else{
    // a plain number with -ve exponent; preserve and check exponent
-   if (this.exp<this.MinExp) 
+   if (this.exp<this.MinExp)
     throw "finish(): Exponent Overflow: "+this.exp;
   }
   }
